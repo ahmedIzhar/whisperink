@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawn To You</title>
+    <link rel="stylesheet" href="secret-styles.css"> <!-- External CSS file -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Black background */
+        }
+
+        .story-container {
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+            padding-top: 100px; /* Adjust top padding */
+            background-color: black; /* Ensure background is black */
+        }
+
+        .story-content {
+            background-color: black;
+            color: white; /* Text color */
+            border: 2px solid gold; /* Golden border */
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px; /* Padding inside the container */
+            text-align: center; /* Center the text */
+            width: 80%; /* Width of the container */
+            max-width: 600px; /* Max width */
+            transition: transform 0.3s; /* Smooth transition for positioning */
+        }
+
+        .language-selection {
+            margin: 20px 0; /* Space above and below the language options */
+            font-size: 20px; /* Increase font size for options */
+            color: white; /* Set text color to white */
+        }
+
+        .language-option {
+            cursor: pointer; /* Pointer cursor for clickable text */
+            transition: color 0.3s; /* Smooth transition for hover effect */
+            text-decoration: none;
+            padding: 7px 20px;
+            border-radius: 8px;
+            border: none;
+            background-color: bisque;
+        }
+
+        .language-option:hover {
+            color: blue; /* Change color on hover */
+        }
+
+        .story-text {
+            margin-top: 20px; /* Space above the story text */
+            font-size: 24px; /* Increase text size */
+            font-family: 'Arial', sans-serif; /* Change the font family */
+        }
+
+        /* Additional spacing for English and Hindi sections */
+        .english-story, .hindi-story {
+            margin-bottom: 40px; /* Space between the two stories */
+        }
+
+        /* Class to move the container upwards smoothly */
+        .upward {
+            transform: translateY(-50px); /* Move the container upwards */
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="story-container">
+        <div class="story-content">
+            <h1>Drawn To You</h1>
+            <div class="language-selection">
+                <button class="language-option" onclick="selectLanguage('english')">English</button> | 
+                <button class="language-option" onclick="selectLanguage('hindi')">Hindi</button>
+            </div>
+            <div class="story-text">
+                <p id="story-content">This is the English version of the secret story.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set default language on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            selectLanguage('english');
+        });
+
+        function selectLanguage(language) {
+            const storyContent = document.getElementById("story-content");
+            const title = document.title;
+
+            if (language === 'english') {
+                storyContent.innerHTML = `One rainy evening, Aryan, a young 20-year-old college student, hurried home from the library, dodging puddles and the heavy drops that fell from the dark Bangalore sky. As he reached his building, his gaze caught sight of someone new—a woman standing by her window, looking out at the rain with a calmness that drew him in. She was beautiful in a subtle, mature way, with a soft smile as she watched the rain. He knew instantly she wasn’t like anyone he’d met before, and that brief glimpse of her, standing alone, stirred something inside him.
+
+In the days that followed, Aryan found himself stealing glances whenever he could. He learned from his parents that she was their new neighbor, Neha, and she lived alone. She was 34, they said, a graphic designer who worked from home. But Aryan didn’t care much for the details—he was simply captivated by the mystery of her, by the way she seemed so composed, yet a little distant, as if her thoughts were far away.
+
+One evening, Aryan’s mother asked him to take a box of sweets to Neha. He tried to seem casual as he knocked on her door, but inside, he was nervous, unsure of how she might react. When she opened the door, she greeted him with a smile, her eyes kind and welcoming. She invited him inside, and as they talked, Aryan found himself forgetting his nervousness. They spoke about books, art, the busy streets of Bangalore, and Aryan was surprised by how easy it was to talk to her. Neha’s voice was calm and warm, and her laugh was light and gentle. For the first time, he felt a connection with someone much older than him, and it made him feel like he was discovering something new and exciting.
+
+From that day on, they would meet often, sometimes by chance, sometimes by quiet design. Aryan would come home from college and find Neha watering her plants on the balcony, or she’d be reading a book in the early morning sunlight. They began sharing coffee on weekends, sitting across from each other in a cozy café nearby. Their conversations grew deeper, shifting from casual talk to more personal stories. Neha shared bits of her life—her work as a graphic designer, her past struggles, her dreams, and the calm she’d found after years of challenges. Aryan, in turn, talked about his love for literature, his dreams of becoming a writer, and his youthful plans for the future.
+
+With each meeting, Aryan felt more drawn to her. Neha was unlike anyone he knew—mature, wise, yet so alive and full of thoughts that fascinated him. She made him see the world differently, and he admired her strength, her patience, and the way she seemed to carry both joy and sorrow in her eyes. One night, as they walked back to their apartments after a long evening of laughter and talk, Aryan’s hand brushed hers, and for a moment, he held his breath, not daring to move. She looked at him, her expression gentle but intense, and in that shared gaze, he felt a warmth bloom between them.
+
+Their relationship took on a quiet, unspoken intimacy. One evening, as they sat together on Neha’s balcony, watching the city lights flicker in the distance, Aryan reached for her hand, feeling an undeniable pull toward her. Neha hesitated, her eyes searching his, but the moment was too strong to resist. They leaned in, and their lips met in a kiss that was both tender and filled with a longing they had tried to ignore. That kiss marked a shift in their connection; what had been a friendship was now something deeper, something that carried the weight of unspoken emotions and a spark of passion they couldn’t deny.
+
+In the weeks that followed, they spent more time together, sneaking quiet moments when no one was around. Their stolen time together was filled with laughter, stories, and tender embraces, but also a desire that simmered just below the surface. Neha would sometimes worry about the age difference and what people might say, but when Aryan was with her, all her concerns seemed to fade. He was gentle and caring, with a look in his eyes that made her feel young and alive again.
+
+One night, as they lay close, Aryan traced his fingers along her hand, marveling at the feeling of being so near to her. They spoke in whispers, laughing softly, sharing dreams and hopes in the privacy of the quiet room. They didn’t need words to express the depth of their feelings; every look, every touch was enough to tell each other what they felt. In those moments, Aryan felt that he had found something rare, a connection that went beyond their ages, something that felt almost timeless.
+
+The warmth and comfort they shared became their secret world, a refuge from everything else. Aryan learned that love could be gentle and patient, full of understanding and support. And for Neha, Aryan brought a lightness to her life, a reminder of what it felt like to be cared for with such open-hearted admiration. Together, they created memories filled with warmth, passion, and the quiet joy of simply being close, learning to find happiness in the present, away from the eyes of the world.
+
+
+
+
+
+
+ `; // Add the full English story text here
+                document.title = "Story - English"; // Update title
+            } else {
+                storyContent.innerHTML = `Ek baar, ek baarish wali shaam thi. Aryan, ek 20 saal ka college student, library se ghar waapas ja raha tha, paani ke chhidkav se bachne ki koshish karte hue aur bhari badalon ke neeche se bhaagte hue. Jaise hi wo apne building ke paas pahuncha, uski nazar ek naye chehre par padhi—aek aurat jo apni khidki ke paas khadi thi, baarish ko dekhti hui ek ajeeb si shanti ke saath, jo Aryan ko kaafi attract kar rahi thi. Wo khoobsurat thi, lekin ek alag, mature tareeke se, aur uski woh halki si muskurahat jo baarish ko dekhti thi, Aryan ke dil mein kuchh jagaye gayi.
+
+Agle kuchh dino mein, Aryan ne kai baar uspar chhupke chhupke nazar daali. Usne apne parents se suna ki wo unke naye pados mein rahne wali Neha thi. Usne suna ki Neha ek graphic designer hai aur ghar se kaam karti hai. Uski umar 34 saal hai. Lekin Aryan ko bas itna pata tha ke wo us aurat ke baare mein kuchh alag mehsoos karta hai—uske chehre par ek ajeeb sa sakoon aur doooriyon ki parchaayi thi jo Aryan ko bahut pasand thi.
+
+Ek shaam, Aryan ki maa ne use kaha ki wo kuch mithai Neha ke liye le jaaye. Aryan thoda casually behave karne ki koshish kar raha tha, lekin andar se kaafi nervous tha. Jab Neha ne darwaza khola, toh uske chehre par woh halka sa muskurahat thi, aur aankhon mein ek garmaahat. Usne Aryan ko andar bulaya, aur dheere dheere baatein shuru hui. Wo dono Bangalore ke raste, books aur art ke baare mein baat karte rahe, aur Aryan ko mehsoos hua ki wo apni nervousness ko bhoolta ja raha hai. Neha ka awaaz, uski hansi, ek alag hi sukoon de rahi thi. Aryan ko laga jaise usne kisi naye aur alag duniya mein kadam rakh diya ho.
+
+Us raat ke baad se, wo dono aksar milne lage. Kabhi woh Neha ko balcony mein paudhoun ko paani dete hue dekh leta, toh kabhi Neha ko subah ki dhoop mein kitaab padhte hue. Weekend pe wo dono ek choti si coffee shop mein milte, aur dher saari baatein karte. Dheere dheere, unke discussions gehre hote gaye. Neha ne apne past ke baare mein kuchh bits Aryan se share kiye, apne challenges, apne sapne aur woh sakoon jo ab usne apne aap mein paa liya tha. Aryan ne bhi uske saath apne future ke plans, apna literature ka pyaar share kiya.
+
+Jab bhi Aryan uske paas hota, uska dil tez dhadakne lagta. Neha ka chehra, uske chehre par woh thoda gam aur khushi ka ehsaas, Aryan ko aur bhi paas khincha laata. Ek raat, jab wo dono lambi baatein karte hue apne flats ki taraf waapas aa rahe the, toh Aryan ka haath bas waise hi Neha ke haath ko chhoota. Ek pal ke liye dono chup ho gaye, aur Neha ne Aryan ki taraf dekha, apni aankhon mein ek alag si intensity ke saath. Us shared pal mein, Aryan ne apne dil mein ek ajeeb si garmaahat mehsoos ki.
+
+Unke beech ek chupchaap connection ban gaya, jo ke zyada baaton ke bina bhi bahut kuch keh raha tha. Ek shaam, Neha ke balcony pe baithe baithe, Aryan ne uska haath pakda, aur ek lamha ke liye dono bas ek dusre ki aankhon mein kho gaye. Us raat, unka woh pehla kiss hua, jo ki bahut soft tha, lekin usmein woh pyar aur attraction bhi tha jo dono dil mein chhupaye hue the.
+
+Us kiss ke baad, unka rishta aur gehra ho gaya. Unke beech ki woh silent understanding aur pyaar aur badhta gaya. Wo dono chhupke chhupke milte, bina kisi ko pata chalaye. Neha thoda chinta karti thi unke umar ke difference ko le kar, lekin jab bhi Aryan uske saath hota, uska woh darr kahi kho jata. Aryan ne use woh pyaar diya jo usne kabhi socha bhi nahi tha.
+
+Us raat, jab wo dono saath lete hue apne future ke sapne aur past ke kisso ko share kar rahe the, Aryan ne Neha ke haath ko dheere se pakda aur kaha, "Yeh pal mere liye bahut khas hai." Neha ne muskurate hue use dekha, aur unke beech woh pyaar aur bhi gehra ho gaya.`; // Add the full Hindi story text here
+                document.title = "Story - Hindi"; // Update title
+            }
+        }
+    </script>
+</body>
+</html>

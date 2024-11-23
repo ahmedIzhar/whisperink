@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warm Hug</title>
+    <link rel="stylesheet" href="secret-styles.css"> <!-- External CSS file -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Black background */
+        }
+
+        .story-container {
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+            padding-top: 100px; /* Adjust top padding */
+            background-color: black; /* Ensure background is black */
+        }
+
+        .story-content {
+            background-color: black;
+            color: white; /* Text color */
+            border: 2px solid gold; /* Golden border */
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px; /* Padding inside the container */
+            text-align: center; /* Center the text */
+            width: 80%; /* Width of the container */
+            max-width: 600px; /* Max width */
+            transition: transform 0.3s; /* Smooth transition for positioning */
+        }
+
+        .language-selection {
+            margin: 20px 0; /* Space above and below the language options */
+            font-size: 20px; /* Increase font size for options */
+            color: white; /* Set text color to white */
+        }
+
+        .language-option {
+            cursor: pointer; /* Pointer cursor for clickable text */
+            transition: color 0.3s; /* Smooth transition for hover effect */
+            text-decoration: none;
+            padding: 7px 20px;
+            border-radius: 8px;
+            border: none;
+            background-color: bisque;
+        }
+
+        .language-option:hover {
+            color: blue; /* Change color on hover */
+        }
+
+        .story-text {
+            margin-top: 20px; /* Space above the story text */
+            font-size: 24px; /* Increase text size */
+            font-family: 'Arial', sans-serif; /* Change the font family */
+        }
+
+        /* Additional spacing for English and Hindi sections */
+        .english-story, .hindi-story {
+            margin-bottom: 40px; /* Space between the two stories */
+        }
+
+        /* Class to move the container upwards smoothly */
+        .upward {
+            transform: translateY(-50px); /* Move the container upwards */
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="story-container">
+        <div class="story-content">
+            <h1>Warm Hug</h1>
+            <div class="language-selection">
+                <button class="language-option" onclick="selectLanguage('english')">English</button> | 
+                <button class="language-option" onclick="selectLanguage('hindi')">Hindi</button>
+            </div>
+            <div class="story-text">
+                <p id="story-content">This is the English version of the secret story.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set default language on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            selectLanguage('english');
+        });
+
+        function selectLanguage(language) {
+            const storyContent = document.getElementById("story-content");
+            const title = document.title;
+
+            if (language === 'english') {
+                storyContent.innerHTML = `In a small town in India, there lived a cheerful boy named Rahul. He was 18 years old and full of life. Every summer, he looked forward to visiting his aunt, Preeti, who was in her early thirties. Preeti was warm, kind, and always made him feel loved. She lived in a cozy house filled with the delicious smell of spices and the sounds of laughter.
+
+As Rahul arrived at her home one hot summer day, he was greeted with a big hug from Preeti. “Rahul! You’ve grown so much since I last saw you!” she said, her eyes sparkling with joy. Rahul smiled and hugged her back tightly. This was the moment he had been waiting for.
+
+The days of summer flew by as Rahul and Preeti spent time together. They would go for long walks in the evenings, talking about everything under the sun. Preeti listened to Rahul’s dreams and fears, and he always felt better after their talks. She shared her own stories, teaching him valuable lessons about life. They laughed together, shared secrets, and made wonderful memories.
+
+One evening, they decided to sit on the terrace and watch the sunset. The sky was painted with beautiful colors—orange, pink, and purple. It was a magical sight. Rahul turned to Preeti and said, “Aunt Preeti, I really appreciate everything you do for me. I don’t know what I would do without you.”
+
+Preeti smiled warmly. “You are like a son to me, Rahul. I will always be here for you.” Hearing her words made Rahul feel safe and loved. He looked at her, feeling grateful for their bond.
+
+As the sun disappeared behind the horizon, they continued talking about their lives and dreams. The atmosphere felt cozy and warm. Rahul felt a special connection with Preeti that he had never felt before. She was not just his aunt; she was his best friend.
+
+That night, after dinner, they settled on the couch to watch a movie. Preeti brought a soft blanket and wrapped it around them both. Rahul felt a rush of warmth as their bodies touched. It felt nice and comforting.
+
+As the movie played, Rahul couldn’t help but glance at Preeti. She looked beautiful in the soft light of the room. In that moment, he felt something different inside him—an urge to express how much he cared for her. With his heart racing, he leaned closer and whispered, “Aunt Preeti, can I tell you something?”
+
+“Of course, Rahul. What is it?” she replied, her eyes looking curious.
+
+“I feel like there’s something special between us. It’s more than just family,” he said, feeling nervous yet excited.
+
+Preeti’s expression softened as she listened to him. “I’ve felt it too, Rahul. You mean a lot to me,” she admitted, her voice warm and sincere.
+
+At that moment, their eyes met, and it felt like time stopped. Rahul leaned in slightly, and in a quick moment, their lips brushed against each other. It was a soft and gentle kiss. Both of them were surprised, but it felt right. They pulled away, looking at each other with wide eyes, feeling both excited and a little scared.
+
+“I know this is complicated,” Rahul said, his voice low. “But it felt good.”
+
+Preeti took a deep breath, trying to think clearly. “Yes, it did. But we need to be careful. This is new for both of us,” she replied, her cheeks a little pink.
+
+The rest of the night was filled with a mix of excitement and nervousness. They continued to watch the movie, but both were aware of the shift in their relationship. Every little touch felt charged with emotions.
+
+As the days passed, their bond deepened. They laughed more, shared more secrets, and created sweet moments together. Rahul loved spending time with Preeti. She taught him how to cook his favorite dishes, and they would dance in the kitchen to their favorite songs. It was a summer full of joy.
+
+One day, while they were preparing lunch together, Rahul playfully nudged Preeti. “Careful! You might burn the rice!” she laughed, pushing him back lightly. They both burst into laughter, enjoying each other's company.
+
+After lunch, they decided to take a walk to the nearby park. The sun was shining brightly, and the flowers were blooming. As they walked, Rahul felt a sense of happiness. He loved being with Preeti. They found a quiet spot under a big tree and sat down, enjoying the shade.
+
+“Rahul,” Preeti said, looking at him with a smile, “I want you to remember something. No matter what happens, you can always talk to me. I’ll always support you.”
+
+Rahul nodded, feeling grateful for her words. “Thank you, Aunt Preeti. I promise I’ll always be honest with you.”
+
+As summer began to wind down, Rahul knew he would have to return home soon. He felt a mix of sadness and gratitude. One night, as they sat on the terrace, watching the stars twinkle in the sky, Rahul turned to Preeti. “Aunt Preeti, I will miss you so much when I go back.”
+
+Preeti smiled, her eyes glistening with emotion. “I will miss you too, Rahul. But remember, our bond will always be there, no matter the distance.”
+
+With that, they shared a warm hug, wrapping each other in love and understanding. It was a moment that felt both bittersweet and beautiful.
+
+As the days came to an end, Rahul packed his bags with a heavy heart. On the last day, Preeti made his favorite meal, and they enjoyed their time together. They promised to stay in touch and visit each other whenever they could.
+
+When it was time for Rahul to leave, Preeti hugged him tightly. “Take care of yourself, Rahul. I believe in you.”
+
+“I will, Aunt Preeti. Thank you for everything,” he said, holding her close.
+
+As Rahul walked away, he felt grateful for the memories they had created. The summer had been filled with love, warmth, and a special bond that he would cherish forever. `; // Add the full English story text here
+                document.title = "Story - English"; // Update title
+            } else {
+                storyContent.innerHTML = `Ek chhote se sheher mein, ek khushmizaaz ladka tha jiska naam Rahul tha. Uski umar 18 saal thi aur wo zindagi se bhara hua tha. Har garmi, wo apni aunty Preeti se milne ka intezaar karta tha, jo apne teesvein saal mein thi. Preeti bahut hi garam, dayalu, aur hamesha usse pyaar mehsoos karwati thi. Wo ek cozy ghar mein rehti thi jahan masalon ki sukhad khushboo aur hansi ki awaaz sunayi deti thi.
+
+Ek garm garmi ke din, jab Rahul uske ghar aaya, to Preeti ne use ek bada hug diya. “Rahul! Tum toh pichli baar se kitne bade ho gaye ho!” usne kaha, uski aankhein khushi se chamakti hui. Rahul muskuraya aur usse mazbooti se gale laga liya. Ye wahi pal tha jiska usne intezaar kiya tha.
+
+Garmi ke din tezise chalte gaye jab Rahul aur Preeti saath mein waqt bitane lage. Wo raat ko lambi lambi sair karte, har cheez ke baare mein baatein karte. Preeti Rahul ke sapne aur dar sunti thi, aur wo hamesha apni baaton se use achha mehsoos karwati thi. Usne apne kahaniyan bhi saath ki, use zindagi ke valuable lessons sikhati thi. Wo saath mein hansi mazak karte, raaz share karte, aur mazedaar yaadein banaate.
+
+Ek shaam, unhone chhat par baith kar suryast dekhne ka faisla kiya. Aasman khoobsurat rangon se bhara hua tha—narangi, gulabi, aur baingani. Ye ek jadoo bhara nazara tha. Rahul ne Preeti se kaha, “Aunty Preeti, main tumhare liye sab kuch appreciate karta hoon. Mujhe nahi pata main tumhare bina kya karunga.”
+
+Preeti ne pyaar se muskurate hue kaha, “Tum mere liye ek beta jaisa ho, Rahul. Main hamesha tumhare liye yahan rahungi.” Uski baatein sunke Rahul ko suraksha aur pyaar mehsoos hua. Usne uski taraf dekha, apne rishte ke liye aabhari mehsoos kiya.
+
+Jab surya us aasman se chhup gaya, to unhone apni zindagi aur sapnon ke baare mein baat karna jari rakha. Mahaul bahut hi cozy aur garam mehsoos ho raha tha. Rahul ne mehsoos kiya ki Preeti ke saath ek khaas sambandh hai jo usne kabhi nahi mehsoos kiya. Wo sirf uski aunty nahi thi; wo uski best friend thi.
+
+Us raat, dinner ke baad, wo sofa par baith gaye movie dekhne ke liye. Preeti ne ek naram blanket laaye aur dono ko lapeta diya. Rahul ne mehsoos kiya ki unke sharir ek dusre se chhu rahe hain. Ye acha aur sukhdayak mehsoos hua.
+
+Jab movie chalu thi, Rahul baar baar Preeti ki taraf dekhta. Wo kamre ki naram roshni mein khoobsurat lag rahi thi. Us pal, usne mehsoos kiya ki uske andar kuch alag hai—apne jazbaat vyakt karne ki ichcha. Uska dil tezi se dhadak raha tha jab wo uske kareeb hua aur kaha, “Aunty Preeti, kya main tumse kuch keh sakta hoon?”
+
+“Bilkul, Rahul. Kya hai?” usne jawab diya, uski aankhein curious thi.
+
+“Main mehsoos karta hoon ki humare beech kuch khaas hai. Ye sirf parivaar se zyada hai,” usne kaha, thoda nervous lekin excited.
+
+Preeti ka chehra naram ho gaya jab usne uski baatein suni. “Maine bhi ye mehsoos kiya hai, Rahul. Tum mere liye bahut maayne rakhte ho,” usne kaha, uski awaz garam aur sacchi thi.
+
+Us pal, unki aankhein mili, aur aisa laga jaise samay thak gaya. Rahul thoda jhuka aur ek pal ke liye, unke hoth ek dusre se mil gaye. Ye ek naram aur dheere se kiss tha. Dono hairaan the, lekin ye sahi mehsoos hua. Unhone alag hua, ek dusre ko wide aankhein se dekha, thoda excited aur thoda dar se bhara hua.
+
+“Main jaanta hoon ye complicated hai,” Rahul ne kaha, uski awaz dheemi. “Lekin ye acha mehsoos hua.”
+
+Preeti ne gehri saans li, sochne ki koshish karte hue. “Haan, ye acha tha. Lekin humein savdhan rehna chahiye. Ye dono ke liye naya hai,” usne kaha, uske galo mein halka sa laal rang aagaya.
+
+Raat ke baad ka samay excitement aur nervousness se bhara hua tha. Unhone movie dekhna jari rakha, lekin dono apne sambandh mein aaye badlav ko mehsoos kar rahe the. Har choti choti chhuan mein jazbaat bhare hue the.
+
+Jais jais din guzarte gaye, unka rishte aur gehra hota gaya. Wo zyada hansi mazak karne lage, zyada raaz share karne lage, aur milkar pyaare pal banate. Rahul ko Preeti ke saath waqt bitana bahut pasand tha. Usne apne pasandida dishes banana sikhaya, aur wo rasoi mein apne pasandida gaane sunte hue naach karte.
+
+Ek din, jab wo milkar lunch tayaar kar rahe the, Rahul ne mazak mein Preeti ko dhakka diya. “Savdhan! Tum chawal jala doogi!” usne hansi se kaha, usne halka sa dhakka diya. Dono hansi mazak karte rahe, ek dusre ka sath lekar khush rehte.
+
+Lunch ke baad, unhone nazdeek ke park mein jaane ka faisla kiya. Suraj chamak raha tha, aur phool khil rahe the. Jab wo chal rahe the, Rahul ne khushi mehsoos ki. Usne Preeti ke saath rehna pasand kiya. Unhone ek bade ped ke neeche ek shant jagah payi aur baith gaye, chhaya ka anand lete hue.
+
+“Rahul,” Preeti ne kaha, uski taraf muskurate hue, “main chahti hoon ki tum kuch yaad rakho. Jo bhi ho, tum mujhse hamesha baat kar sakte ho. Main hamesha tumhara saath doongi.”
+
+Rahul ne sir hilaaya, uski baatein sunke aabhari mehsoos kiya. “Dhanyavaad, Aunty Preeti. Main waada karta hoon ki main hamesha tumse sach bolunga.”
+
+Jaise jaise garmi ka samay khatam hone laga, Rahul ko ye mehsoos hua ki use jaldi hi ghar wapas jana padega. Uske mann mein udasi aur aabhari ka mix tha. Ek raat, jab wo chhat par baith kar sitare dekh rahe the, Rahul ne Preeti se kaha, “Aunty Preeti, jab main wapas jaunga toh mujhe tumhari bahut yaad aayegi.”
+
+Preeti ne muskurate hue kaha, uski aankhein bhavuk thi. “Mujhe bhi tumhari bahut yaad aayegi, Rahul. Lekin yaad rakhna, hamara rishte hamesha rahega, chahe faasla kitna bhi ho.”
+
+Ye kehkar, unhone ek garm hug share kiya, ek dusre ko pyaar aur samajh mein lapetkar. Ye ek pal tha jo bittersweet aur khoobsurat mehsoos hota tha.
+
+Jaise jaise din khatam hone lage, Rahul ne bhari mann se apne bags pack kiye. Aakhri din, Preeti ne uska pasandida khana banaya, aur unhone saath mein waqt bitaaya. Unhone waada kiya ki wo hamesha sampark mein rahenge aur jab bhi mil sake, milenge.
+
+Jab Rahul ko jaana tha, to Preeti ne usse mazbooti se gale lagaya. “Apna khayal rakhna, Rahul. Main tum par vishwas karti hoon.”
+
+“Main rakhunga, Aunty Preeti. Har cheez ke liye dhanyavaad,” usne kaha, use gale lagate hue.
+
+Jab Rahul wahan se gaya, usne un yaadon ke liye aabhari mehsoos kiya jo unhone banayi thi. Garmi ka ye samay pyaar, garmi, aur ek khaas rishte se bhara tha jo wo hamesha yaad rakhega.`; // Add the full Hindi story text here
+                document.title = "Story - Hindi"; // Update title
+            }
+        }
+    </script>
+</body>
+</html>

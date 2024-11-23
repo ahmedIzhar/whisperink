@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love on Fire</title>
+    <link rel="stylesheet" href="secret-styles.css"> <!-- External CSS file -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Black background */
+        }
+
+        .story-container {
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+            padding-top: 100px; /* Adjust top padding */
+            background-color: black; /* Ensure background is black */
+        }
+
+        .story-content {
+            background-color: black;
+            color: white; /* Text color */
+            border: 2px solid gold; /* Golden border */
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px; /* Padding inside the container */
+            text-align: center; /* Center the text */
+            width: 80%; /* Width of the container */
+            max-width: 600px; /* Max width */
+            transition: transform 0.3s; /* Smooth transition for positioning */
+        }
+
+        .language-selection {
+            margin: 20px 0; /* Space above and below the language options */
+            font-size: 20px; /* Increase font size for options */
+            color: white; /* Set text color to white */
+        }
+        
+        .language-option {
+            cursor: pointer; /* Pointer cursor for clickable text */
+            transition: color 0.3s; /* Smooth transition for hover effect */
+            text-decoration: none;
+            padding: 7px 20px;
+            border-radius: 8px;
+            border: none;
+            background-color: bisque;
+        }
+
+        .language-option:hover {
+            color: blue; /* Change color on hover */
+        }
+
+        .story-text {
+            margin-top: 20px; /* Space above the story text */
+            font-size: 24px; /* Increase text size */
+            font-family: 'Arial', sans-serif; /* Change the font family */
+        }
+
+        /* Additional spacing for English and Hindi sections */
+        .english-story, .hindi-story {
+            margin-bottom: 40px; /* Space between the two stories */
+        }
+
+        /* Class to move the container upwards smoothly */
+        .upward {
+            transform: translateY(-50px); /* Move the container upwards */
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="story-container">
+        <div class="story-content">
+            <h1>Love on Fire</h1>
+            <div class="language-selection">
+                <button class="language-option" onclick="selectLanguage('english')">English</button> | 
+                <button class="language-option" onclick="selectLanguage('hindi')">Hindi</button>
+            </div>
+            <div class="story-text">
+                <p id="story-content">This is the English version of the secret story.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set default language on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            selectLanguage('english');
+        });
+
+        function selectLanguage(language) {
+            const storyContent = document.getElementById("story-content");
+            const title = document.title;
+
+            if (language === 'english') {
+                storyContent.innerHTML = `In a bustling city in India, there was a high school known for its vibrant atmosphere and diverse student body. Among the students, there was a junior boy named Aarav. He was fifteen, with bright eyes and a shy smile. Aarav was not very confident around girls, often getting tongue-tied whenever he tried to speak to them. He focused on his studies and loved playing cricket with his friends after school.
+
+In contrast, there was Maya, a senior girl known for her beauty and charm. At eighteen, she was popular and confident, with long, flowing hair and a warm smile that could light up any room. Maya was a good student, but she also loved to have fun. She had a group of friends who adored her, and they often spent their time hanging out and making memories.
+
+One day, as Aarav was walking to class, he accidentally bumped into Maya in the hallway. Books fell from her arms, scattering across the floor. Flustered, Aarav quickly bent down to help her pick them up.
+
+“I’m so sorry! I didn’t see you there,” he stammered, his cheeks turning red.
+
+Maya smiled at him, her eyes sparkling. “It’s okay! I should have been paying attention too. Thank you for helping me.”
+
+As they gathered the books, Aarav felt a strange flutter in his chest. He had always admired Maya from a distance but had never imagined he would be speaking to her. Once the books were collected, they stood up, and Maya brushed a loose strand of hair behind her ear.
+
+“Are you new in school?” she asked, tilting her head slightly.
+
+“No, I’ve been here since my first year,” Aarav replied, feeling more confident. “I’m just not very good at talking to seniors.”
+
+Maya chuckled softly. “You’re doing just fine. I’m Maya, by the way.”
+
+“Aarav,” he said, smiling shyly.
+
+From that day on, their encounters became more frequent. Aarav started looking forward to seeing Maya in the hallways. They would exchange smiles and small talk, which slowly blossomed into longer conversations. Maya found Aarav’s innocence charming, while Aarav admired her confidence and kindness.
+
+As the weeks went by, Aarav’s feelings for Maya deepened. He couldn’t help but notice how beautiful she looked during the morning assembly, her hair catching the sunlight. He wanted to tell her how he felt, but he was terrified of ruining their friendship.
+
+One sunny afternoon, while sitting under a large banyan tree during lunch break, Aarav gathered the courage to ask Maya if she would like to join him for a study session. To his surprise, she agreed.
+
+“Sure, I could use some help with math!” Maya laughed. “Let’s meet at the library after school.”
+
+Aarav’s heart raced with excitement. The library was quiet, and they could focus on their studies without any distractions. That evening, Aarav arrived early, his palms sweaty with nerves. When Maya walked in, she looked radiant. They settled at a table in a corner, and Aarav couldn’t help but steal glances at her.
+
+As they worked through math problems, their hands brushed against each other a few times. Each touch sent a spark through Aarav, making him more aware of her presence. Maya noticed his nervousness and smiled reassuringly.
+
+“You’re doing great, Aarav. Just relax,” she encouraged.
+
+After studying for a while, they took a break. Maya leaned back in her chair, stretching her arms above her head. “It feels nice to take a break. Thanks for helping me.”
+
+Aarav nodded, his heart pounding. “I really enjoy spending time with you.”
+
+Maya looked at him, her expression softening. “I enjoy it too. You’re really different from other boys.”
+
+Aarav felt his cheeks flush. “How so?”
+
+“You’re genuine. You don’t try to show off or act cool. I like that,” she said, leaning in closer.
+
+Just then, Aarav gathered all his courage. “Maya, can I tell you something?”
+
+“Of course,” she replied, her eyes curious.
+
+“I think…I think I like you. More than just a friend,” he confessed, his voice barely above a whisper.
+
+Maya paused for a moment, her eyes searching his. “I’m glad you told me, Aarav. I’ve been feeling something too, but I wasn’t sure how to say it.”
+
+A wave of relief washed over Aarav. They both smiled, and Aarav felt a warmth spread through him.
+
+As their friendship blossomed into something more, they found themselves sharing secret glances and playful touches. One evening, after finishing their studies, they decided to go for a walk in a nearby park. The sun was setting, painting the sky in beautiful shades of orange and pink.
+
+They walked side by side, talking and laughing, their fingers brushing against each other. Aarav felt bold and gently intertwined his fingers with Maya’s. She looked at him, surprised but pleased.
+
+“Is this okay?” he asked nervously.
+
+Maya smiled and squeezed his hand. “It’s more than okay.”
+
+They found a quiet spot in the park, surrounded by trees and soft grass. The atmosphere was peaceful, and they sat down on a bench. Aarav’s heart raced as he turned to Maya.
+
+“Maya, I really like you,” he said, looking into her eyes.
+
+“I like you too, Aarav,” she admitted, her cheeks slightly pink.
+
+In that moment, something shifted between them. They leaned closer, and Aarav felt the warmth radiating from her. Without thinking, he leaned in and kissed her softly. It was a sweet, innocent kiss, filled with all the emotions they had kept inside.
+
+Maya kissed him back, and Aarav felt his heart soar. They pulled away, both breathless and smiling. It felt like magic.
+
+As their relationship grew, they began to spend more time together, sharing their dreams and fears. Aarav found himself opening up to Maya in ways he never thought possible. They studied together, went for walks, and shared countless laughter-filled moments.
+
+But it wasn’t just about the sweetness of young love. There were also moments of passion that ignited between them. One night, as they sat on the rooftop of Aarav’s house, gazing at the stars, the air felt electric.
+
+“Maya, do you ever wonder what it would be like…?” Aarav hesitated, unsure of how to finish his sentence.
+
+“What do you mean?” she asked, her voice soft.
+
+“Like, what it would be like to be together… like really together?” Aarav’s heart raced as he spoke.
+
+Maya’s cheeks flushed, and she looked away shyly. “I think about it sometimes. It feels like we have this amazing connection.”
+
+Aarav moved a little closer, their shoulders touching. “I want to explore that connection, Maya. I feel safe with you.”
+
+Maya looked into his eyes, a mix of excitement and nervousness. “Me too, Aarav. But let’s take our time, okay?”
+
+“Of course,” he replied, smiling. “I wouldn’t want to rush anything with you.”
+
+As the days turned into weeks, their bond only grew stronger. They shared kisses under the stars, laughter during study sessions, and even quiet moments where they would simply enjoy each other’s company.
+
+One evening, while studying at Maya’s house, they found themselves alone in her room. The atmosphere was thick with tension as they sat on her bed, books scattered around them. Aarav could feel his heart pounding as he turned to Maya.
+
+“Maya, can I kiss you again?” he asked, his voice slightly shaky.
+
+“Please do,” she whispered, her eyes sparkling.
+
+Aarav leaned in, and their lips met in a deeper kiss this time, full of longing and desire. As they kissed, the world outside faded away. They lost themselves in each other, the kiss becoming more passionate as Aarav held her close.
+
+Maya’s hands found their way to Aarav’s hair, and he felt a rush of warmth. They pulled away, both breathless, their foreheads resting against each other.
+
+“Wow,” Maya breathed, a smile spreading across her face. “That was… amazing.”
+
+“Yeah,” Aarav replied, still feeling the spark between them. “I’ve never felt anything like that.”
+
+They spent the rest of the evening sharing stories and giggles, but the tension lingered in the air. Aarav could feel the connection between them intensifying, and he knew they were crossing into new territory.
+
+As they cuddled on the bed, Aarav felt a wave of emotions. He wanted to be close to Maya, to share everything with her. They kissed again, and this time, it felt different—more intimate, more passionate.
+
+The moment was electric, and Aarav’s heart raced as he pulled Maya closer. They kissed deeply, lost in the moment, their hands exploring each other gently. It was a beautiful mix of tenderness and desire.
+
+But just as things were getting intense, they pulled away, both breathless and slightly shocked by what had just happened.
+
+“Maybe we should take a break?” Aarav suggested, feeling a mix of excitement and uncertainty.
+
+Maya nodded, her cheeks flushed. “Yeah, I think that’s a good idea. I want everything to feel special between us.”
+
+They both smiled, knowing they had taken a big step in their relationship. As they continued to spend time together, their bond deepened further. They supported each other in their studies, celebrated each other’s successes, and leaned on each other during tough times.
+
+Finally, the day of the school annual day arrived. Maya was participating in a dance performance, and Aarav couldn’t help but feel proud of her. As he watched her dance, he felt a surge of emotions—admiration, love. and after her dance performance, he gave her a kiss on the cheek in the dressing room and then maya dragged him to one of the classrooms and they started making out there it was very intense they shared an amazing love.
+At Maya's house they were forcing her to shift to other country for higher studies she was very upset because she had to leave Aarav behind she kept neglecting but her parents were convinced so the next day. They were at school and maya was very upset and couldn't tell anything to Aarav. Aarav noticed and went towards her but she kept ignoring him and after her school she rushed to home this happened for days and in the final exams Maya was having Boards so she couldn't meet Aarav in school. And after the exams when Aarav decided to go meet Maya he was shocked to hear that she left the country 3 days ago. `; // Add the full English story text here
+                document.title = "Story - English"; // Update title
+            } else {
+                storyContent.innerHTML = `Ek bheed bhare sheher mein, ek high school tha jo apne vibrant atmosphere aur diverse student body ke liye jaana jaata tha. Students mein ek junior ladka tha jiska naam Aarav tha. Woh pandrah saal ka tha, uski aankhein chamakti thi aur ek sharmile se muskurahat thi. Aarav ladkiyon ke saamne zyada confident nahi tha, aksar jab bhi unse baat karne ki koshish karta, uska munh band ho jaata. Usne apne padhai par dhyan diya aur school ke baad doston ke saath cricket khelna pasand kiya.
+
+Uske vipreet, Maya ek senior ladki thi jo apni khoobsurti aur charm ke liye jaani jaati thi. At atharah saal ki umar, woh popular thi aur confident thi, uske lambe, behte baalon aur ek aise muskurahat thi jo kisi bhi room ko roshan kar sakti thi. Maya achchi student thi, lekin usse maza karna bhi pasand tha. Uske paas doston ka ek group tha jo usse bahut pasand karte the, aur ve aksar saath milkar waqt bitate the aur yaadein banate the.
+
+Ek din, jab Aarav class ki taraf ja raha tha, woh galti se hallway mein Maya se takra gaya. Uske haathon se kitabein gir gayi, jo zameen par bikhar gayi. Flustered hote hue, Aarav jaldi se neeche jhuk gaya taaki uski madad kar sake.
+
+“Mujhe maaf kar do! Main wahan nahi dekha,” usne stammer karte hue kaha, uske gaal laal ho gaye.
+
+Maya ne usse muskurate hue dekha, uski aankhein chamakti thi. “Koi baat nahi! Mujhe bhi dhyaan dena chahiye tha. Tumhara shukriya madad karne ke liye.”
+
+Jab ve kitabein ikatthi kar rahe the, Aarav ko apne dil mein ajeeb si halchal mehsoos hui. Usne hamesha Maya ko door se admire kiya tha, lekin kabhi socha nahi tha ki woh usse baat karega. Jab kitabien ikatthi ho gayi, tab ve khade hue, aur Maya ne apne kaan ke peeche se baalon ka ek dhaga hata diya.
+
+“Tum school mein naye ho kya?” usne thoda jhukkar pucha.
+
+“Nahi, main apne pehle saal se yahaan hoon,” Aarav ne jawab diya, ab woh thoda confident mehsoos kar raha tha. “Main seniors se baat karne mein zyada achha nahi hoon.”
+
+Maya ne halki si hansi maari. “Tum bilkul theek kar rahe ho. Main Maya hoon, waise.”
+
+“Aarav,” usne sharmate hue kaha.
+
+Us din ke baad, unki mulaqat aksar hone lagi. Aarav ne Maya se hallways mein milne ki ummeed lagayi. Ve muskurahat aur choti baatein karte rahe, jo dheere-dheere lambi conversations mein badal gayi. Maya ko Aarav ki innocence pasand aayi, jabki Aarav ne uski confidence aur kindness ki tareef ki.
+
+Jaisey-jaisey hafte guzar gaye, Aarav ke Maya ke liye jazbaat gehre hote gaye. Usne dekha ki woh assembly ke doraan kitni khoobsurat lagti hai, uske baal suraj ki roshni mein chamakte hain. Usne socha ki woh usse apne jazbaat bata de, lekin woh dosti ko kharab karne se darte the.
+
+Ek sunny dopahar, jab ve lunch break mein ek bade banyan ke ped ke neeche baithe the, Aarav ne himmat ikatthi ki aur Maya se kaha ki kya woh usse study session ke liye milne aayegi. Uski aashcharya ke liye, Maya ne haan kar diya.
+
+“Bilkul, mujhe math mein madad chahiye!” Maya ne hansi maarke kaha. “School ke baad library mein milte hain.”
+
+Aarav ka dil khushi se dhadak raha tha. Library shant thi, aur ve apni padhai par dhyan de sakte the. Us raat, Aarav pehle hi aa gaya, uski palms paseene se bhari thi. Jab Maya aayi, woh roshni ki tarah chamakti thi. Unhone ek kone mein table par baithe, aur Aarav baar-baar usse chori-chori dekh raha tha.
+
+Jab ve math problems par kaam kar rahe the, unke haath aksar ek dusre se chhu jaate the. Har touch se Aarav ke dil mein ek chingari si mehsoos hoti thi, uski maujoodgi ke prati zyada jagruk karte hue. Maya ne uski nervousness dekhi aur muskurahat di.
+
+“Tum bahut achhe kar rahe ho, Aarav. Bas relax karo,” usne prerna di.
+
+Thodi der padhai karne ke baad, unhone break liya. Maya apne kursi par jhakti hui baithi, apne haathon ko upar ki taraf khichti. “Break lena achha lagta hai. Tumhara shukriya madad karne ke liye.”
+
+Aarav ne sirf nod kiya, uska dil dhadak raha tha. “Mujhe tumhare saath waqt bitana bahut pasand hai.”
+
+Maya ne uski taraf dekha, uska chehra naram ho gaya. “Mujhe bhi pasand hai. Tum baaki ladkon se bilkul alag ho.”
+
+Aarav ke gaal laal ho gaye. “Kaise?”
+
+“Tum sachche ho. Tum dikhava nahi karte ya cool dikhne ki koshish nahi karte. Mujhe ye pasand hai,” usne aur paas aa kar kaha.
+
+Tab Aarav ne apni saari himmat ikatthi ki. “Maya, kya main tumse kuch keh sakta hoon?”
+
+“Bilkul,” usne kaha, uski aankhein jigyasa se bhari thi.
+
+“Main sochta hoon… main tumhe pasand karta hoon. Sirf dosti se zyada,” usne ghatne se halki si awaaz mein kaha.
+
+Maya ne kuch der tak rukkar, uski aankhein us par jhaankti rahe. “Main khush hoon ki tumne ye bataya, Aarav. Mujhe bhi kuch mehsoos hota hai, lekin main nahi jaanthi thi kaise kehna hai.”
+
+Aarav par ek sukoon ka leher chala gaya. Dono ne muskuraya, aur Aarav ne apne andar ek garmi mehsoos ki.
+
+Jaise-jaise unki dosti kuch aur gehri hoti gayi, ve ek dusre se chori-chori nazrein milane lage aur mazak ki tarah chhoti-chhoti touches karne lage. Ek shaam, padhai ke baad, unhone park mein chalne ka faisla kiya. Suraj doob raha tha, aasmaan ne sundar orange aur pink rangon se bhara tha.
+
+Ve ek dusre ke saath chale, baatein aur hansi mazak karte hue, unki ungliyan aksar ek dusre se chhuti thi. Aarav ne himmat ikatthi ki aur dhire se Maya ki ungliyon ko apne saath milaya. Usne uski taraf dekha, hairan lekin khush.
+
+“Kya ye theek hai?” usne nervous hote hue pucha.
+
+Maya ne muskurate hue uski ungli ko dabaaya. “Ye theek hai.”
+
+Unhone park mein ek shaant jagah dhundi, jahan ped aur naram ghas tha. Atmosphere shant tha, aur ve ek bench par baith gaye. Aarav ka dil dhadak raha tha jab usne Maya ki taraf dekha.
+
+“Maya, mujhe tumse kuch kehna hai,” usne uski aankhon mein dekhti hui kaha.
+
+“Mujhe bhi kehna hai, Aarav,” usne uski aankhon mein dekhti hui kaha, uski gaal thodi si laal ho gayi thi.
+
+Us pal, unke beech kuch badal gaya. Ve paas aaye, aur Aarav ne uski garmi mehsoos ki. Bina sochay, usne akele akele aage badhkar usse pyaar se chuma. Ye ek pyaara, nirdosh chumban tha, jo unke andar ke sabhi jazbaaton se bhara hua tha.
+
+Maya ne bhi usse chuma, aur Aarav ne apne dil ki uchai mehsoos ki. Ve dono alag hue, thode bechain aur muskurate hue. Ye jaadu ki tarah mehsoos hua.
+
+Jaise-jaise unka rishta badh raha tha, ve aur zyada samay bitaate gaye, apne sapne aur dar share karte gaye. Aarav ne dekha ki woh Maya ke saath aise khul gaya jaisa usne kabhi nahi socha tha.
+
+Maya bhi dheere-dheere Aarav ki simplicity aur sincerity se prabhavit hui. Unka pyaar unki dosti se shuru hua tha, lekin ab ye kuch aur gehra tha.
+
+Ek din, jab school ke saal ka ant ho raha tha, Aarav ne socha ki woh Maya se apne jazbaat ke baare mein baat karega. Unhone ek dusre ke saath khud ko samarpit kar diya tha, aur ab unke liye ek dusre ko formally ask karna zaroori tha.
+
+“Maya, kya tum mere saath iss garmiyon ke dauraan kuch samay bitana chahti ho?” usne dhadakhti dil ke saath kaha.
+
+Maya ki aankhein chamakti thi. “Haan, mujhe bhi yahi sochna tha! Tumne mujhe khud pehle se pata tha.”
+
+Dono ki aankhein ek dusre se mili, aur unhone ek dusre ko pyaar se dekha. Is tarah, unka pyaar shuru hua, jo unki zindagi mein ek nayi roshni le aaya.
+
+`; // Add the full Hindi story text here
+                document.title = "Story - Hindi"; // Update title
+            }
+        }
+    </script>
+</body>
+</html>

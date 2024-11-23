@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dangerous Love</title>
+    <link rel="stylesheet" href="secret-styles.css"> <!-- External CSS file -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Black background */
+        }
+
+        .story-container {
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+            padding-top: 100px; /* Adjust top padding */
+            background-color: black; /* Ensure background is black */
+        }
+
+        .story-content {
+            background-color: black;
+            color: white; /* Text color */
+            border: 2px solid gold; /* Golden border */
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px; /* Padding inside the container */
+            text-align: center; /* Center the text */
+            width: 80%; /* Width of the container */
+            max-width: 600px; /* Max width */
+            transition: transform 0.3s; /* Smooth transition for positioning */
+        }
+
+        .language-selection {
+            margin: 20px 0; /* Space above and below the language options */
+            font-size: 20px; /* Increase font size for options */
+            color: white; /* Set text color to white */
+        }
+
+        .language-option {
+            cursor: pointer; /* Pointer cursor for clickable text */
+            transition: color 0.3s; /* Smooth transition for hover effect */
+            text-decoration: none;
+            padding: 7px 20px;
+            border-radius: 8px;
+            border: none;
+            background-color: bisque;
+        }
+
+        .language-option:hover {
+            color: blue; /* Change color on hover */
+        }
+
+        .story-text {
+            margin-top: 20px; /* Space above the story text */
+            font-size: 24px; /* Increase text size */
+            font-family: 'Arial', sans-serif; /* Change the font family */
+        }
+
+        /* Additional spacing for English and Hindi sections */
+        .english-story, .hindi-story {
+            margin-bottom: 40px; /* Space between the two stories */
+        }
+
+        /* Class to move the container upwards smoothly */
+        .upward {
+            transform: translateY(-50px); /* Move the container upwards */
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="story-container">
+        <div class="story-content">
+            <h1>Dangerous Love</h1>
+            <div class="language-selection">
+                <button class="language-option" onclick="selectLanguage('english')">English</button> | 
+                <button class="language-option" onclick="selectLanguage('hindi')">Hindi</button>
+            </div>
+            <div class="story-text">
+                <p id="story-content">This is the English version of the secret story.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set default language on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            selectLanguage('english');
+        });
+
+        function selectLanguage(language) {
+            const storyContent = document.getElementById("story-content");
+            const title = document.title;
+
+            if (language === 'english') {
+                storyContent.innerHTML = `Ravi was from a small, humble home in the outskirts of the city, living a life of simplicity that centered around his studies, part-time work, and family responsibilities. Despite his challenges, he was determined and hardworking, managing to get a scholarship to one of the top schools in the city—a school where he felt like a stranger among wealthy classmates. That’s where he met Aisha, the school’s star, who came from one of the wealthiest families in town. She was always surrounded by friends, had the latest gadgets, and seemed to live in a world he’d only ever seen in movies.
+
+At first, Ravi thought someone like Aisha would never notice him. But one day, while he was studying in the library, he noticed her across the room, trying to get a book from a high shelf. Without thinking, he walked over and helped her, reaching up to grab it for her. “Thanks, Ravi,” she said, smiling in a way that made him feel seen for the first time. They talked a little, and Aisha was surprised by his knowledge and gentle nature. This meeting turned into more casual encounters, which grew into long conversations. She found herself looking for him between classes, and he started coming to the library just in case she’d be there.
+
+Over time, their conversations grew deeper. Aisha would tell Ravi about the pressures she felt from her family, the expectations, and how, despite her privileges, she sometimes felt lonely. Ravi, in turn, shared his struggles and dreams, talking about how he wanted to make a better life for his family. They were from different worlds, but somehow, they found a shared understanding.
+
+One rainy afternoon, they found themselves alone in the library again. They were sitting closer than usual, whispering so the librarian wouldn’t hear them. Aisha gently brushed Ravi’s hand, her fingers lingering on his. He looked at her, his heart pounding, and in that moment, they both leaned in. Their first kiss was soft, nervous, filled with emotions neither of them knew how to express. It was brief but powerful. When they pulled back, they couldn’t help but smile shyly, both overwhelmed but excited by this new step.
+
+Their relationship deepened, and soon they were meeting in hidden spots around the school, trying to keep their growing connection a secret. They’d sit close in the quiet canteen when it was empty, stealing glances and little touches, laughing as if they didn’t have a care in the world. Sometimes, Ravi would brush a stray strand of hair from Aisha’s face, his hand lingering on her cheek, his thumb gently tracing her skin. She would close her eyes, savoring these moments that made her feel more alive than ever before.
+
+One day after school, as everyone else left, they found themselves alone in an empty classroom. Aisha closed the door, and they stood close, unable to resist each other any longer. Ravi pulled her into his arms, their bodies pressed together, and they shared a deep, passionate kiss. His hands rested on her waist, pulling her closer, and she wrapped her arms around his neck. For a few stolen moments, the world outside disappeared, and it was just them, breathing each other in.
+
+As the months passed, they became bolder. In the quiet corners of the school, they’d share gentle kisses, holding hands when no one was watching. Aisha would lean her head on Ravi’s shoulder, feeling safe and understood in a way she never had before. One day, during a free period, they snuck into the school’s library. Hiding behind a row of books, Aisha pulled him close, her hands resting on his chest as he wrapped his arms around her waist. Their kisses grew deeper, more intense, as they tried to keep quiet, stifling their giggles and whispers.
+
+But with each passing day, Ravi and Aisha knew their secret romance couldn’t last forever. Their families would never understand, and the world outside their school walls wouldn’t accept them. Yet, in those quiet moments, they found a love that was pure and real, one they’d remember forever, even if they had to keep it hidden. As their connection grew, Ravi and Aisha began to live for the moments they shared, even though they knew their time together was limited. They had built a world that was just theirs, hidden from the prying eyes of classmates, teachers, and families who could never understand the depth of their bond. But the secrecy and the thrill of sneaking around only seemed to make their love stronger, like a fire that couldn’t be put out.
+
+One evening, as the school was closing, Ravi waited for Aisha outside by the gate. The sun was setting, casting a warm glow over the empty grounds. She ran to him, her eyes shining as she slipped her hand into his. "Come with me," she whispered, leading him to the old playground tucked away at the back of the campus. The swings were creaking in the wind, and they sat down side by side, watching as the colors of the sunset melted into the night sky. For a moment, everything was silent, and Ravi felt as if they were the only two people in the world.
+
+Aisha turned to him, her face soft with a mix of happiness and sadness. “Ravi, what if this is all we have? These few moments?” she asked, her voice barely a whisper. Ravi reached over and took her hand in his, his eyes steady. “Then let’s make every moment count,” he replied. He brushed a strand of hair from her face, and they shared a long, tender kiss under the stars, holding onto each other as if nothing could break them apart.
+
+But reality crept in as the days went by. Aisha’s family had plans for her—a future filled with expectations, a career path, and even a marriage alliance that would “suit her status.” Ravi overheard whispers from her friends, who hinted at the life Aisha was meant to have, a life that had no place for a boy like him.
+
+Despite this, they continued to meet in secret. They found solace in each other’s arms, stealing away to the rooftop or hiding behind the old auditorium. Each stolen glance, every lingering touch, felt more precious, knowing it could all come to an end.
+
+Then, one day, Ravi got a message from Aisha. She sounded urgent, and they agreed to meet in their favorite spot—the library, just as they had met the first time. When he arrived, she was waiting by the window, looking out with a pained expression. She turned to him, her eyes glistening. “Ravi, my family… they found out about us,” she said, her voice trembling.
+
+Ravi felt his heart sink. “What did they say?” he asked, dreading the answer. Aisha’s voice broke as she explained that her family was sending her away to another city, away from the school, away from him. “They think it’s for the best, that I focus on my future without any ‘distractions,’” she said bitterly.
+
+They stood there in silence, both of them struggling to hold back tears. “I don’t want to lose you,” Ravi whispered, pulling her into his arms. Aisha clung to him, pressing her face into his shoulder. “We don’t have to say goodbye,” she said, her voice barely a whisper. “No matter where I go, I’ll always remember us, these moments.”
+
+They shared one final, bittersweet kiss, pouring all of their emotions into that embrace. The weight of their love, their hopes, and their pain filled the air. And when they finally pulled away, they knew it was goodbye—not just for now, but possibly forever.
+
+As Aisha walked away, Ravi watched her go, his heart breaking. He felt a profound emptiness, but also gratitude for the love they had shared, even if it was brief. They had been each other’s secret, each other’s refuge, and though they could never be together openly, the memory of their love would remain, etched into their hearts forever.
+
+And as he walked home that night, Ravi couldn’t help but smile, knowing that even in his ordinary life, he had experienced an extraordinary love—a love that had changed him, a love that he would carry with him, no matter where life took him.
+
+
+
+ `; // Add the full English story text here
+                document.title = "Story - English"; // Update title
+            } else {
+                storyContent.innerHTML = `Ravi ek chhote se, sade ghar se tha jo sheher ke bahar ke ilake mein tha. Uski zindagi sadgi se bhari thi, jisme uske studies, part-time kaam, aur family ki zimmedariyan sabse zyada important thi. Halat ke bawajood, wo determined aur hardworking tha, aur ek scholarship hasil ki thi sheher ke sabse achhe school mein—ek aise school mein jahan wo apne ameer classmates ke beech khud ko ek ajeeb mehsoos karta tha. Wahan uski mulaqat hui Aisha se, jo school ki star thi aur sheher ke ek ameer ghar se thi. Wo hamesha doston se ghirti rehti thi, latest gadgets rakhti thi, aur aise duniya mein rehti thi jo usne sirf movies mein dekhi thi.
+
+Shuru mein, Ravi ko laga tha ki koi Aisha jaise ladki uspar kabhi dhyan nahi degi. Lekin ek din, jab wo library mein padhai kar raha tha, usne dekha ki Aisha ek high shelf se kitaab uthane ki koshish kar rahi thi. Bina sochhe, wo wahan gaya aur uski madad ki, us kitaab ko utha kar usse de diya. "Thanks, Ravi," usne kaha, ek muskaan ke saath jo pehli baar usse aise mehsoos karwa rahi thi ki wo dekh gaya tha. Thodi baat cheet hui, aur Aisha ko Ravi ki knowledge aur uske gentle nature ka pata chala. Ye mulaqat zyada casual milne mein badli, jo dheere-dheere lambi baaton mein badal gayi. Aisha khud ko beech-beech mein Ravi se milte dekhne lagi, aur Ravi bhi library jaane laga, bas yeh soch kar ki shayad Aisha wahan ho.
+
+Samay ke saath, unki baatein gehri hoti gayi. Aisha apne ghar walon ke pressures ke baare mein batati thi, unki umeedon ke baare mein, aur kaise uski privileges ke bawajood, kabhi kabhi wo akeli mehsoos karti thi. Ravi, apni struggles aur sapnon ke baare mein batata, kaise wo apne ghar walon ke liye zindagi behtar banana chahta tha. Wo dono alag duniyaon se the, lekin kisi tareeke se, unhone ek doosre ko samajh liya tha.
+
+Ek rainy afternoon, wo library mein akela the, aur is baar wo ek doosre ke kareeb baith gaye the, chupke se baatein karte, taaki librarian sun na le. Aisha ne dheere se Ravi ka haath chhua, uske ungliyan uske haath par thodi der ke liye thami. Ravi ne uski taraf dekha, uska dil dhadak raha tha, aur ek pal ke liye dono ne apne chehre paas kiye. Unka pehla kiss soft, nervous, aur un emotions se bhara tha jo dono samajh nahi paaye the. Wo chhota tha, lekin bohot powerful. Jab wo alag hue, dono shy smile ke saath, ek dusre ke saath is naye kadam ki khushi mehsoos kar rahe the.
+
+Unka rishta gehra hota gaya, aur jaldi hi wo school ke chhupay jagah pe milne lage, apne badhte rishton ko raaz rakhta hua. Wo khali canteen mein baith kar, ek doosre ko chhupke dekhtay aur halki si chhuan karte, aise hans rahe the jaise duniya ki koi fikar na ho. Kabhi Ravi Aisha ke chehre se ek baal hata deta, uske gaal pe apna haath rakhta, apna angutha dheere dheere uski twacha par ghoomta. Aisha apni aankhein band kar leti thi, in lamhon ko jeetne ka maza, jo use pehli baar zindagi mein mehsoos ho raha tha.
+
+Ek din school ke baad, jab sab log ja chuke the, wo dono akela ek khaali classroom mein mil gaye. Aisha ne darwaza band kar diya, aur wo dono kareeb khade ho gaye, ab aur zyada apne jazbaaton ko rok nahi paaye. Ravi ne usse apne daaton mein khinch liya, unke badan ek doosre se lage, aur wo gehra, junoon bhara kiss share kiya. Uske haath Aisha ke kamar pe the, aur usne apne haath Ravi ke gardan ke aas paas daal diye. Kuch chhupay pal, duniya ke tamam fikraon se door, bas wo dono, ek doosre mein kho gaye the.
+
+Mahine guzar gaye, aur wo dono thode zyada daredevil ho gaye. School ke chhupay kono mein, wo apne pyaar ka izhaar karte, ek doosre ka haath pakadte jab koi nahi dekhta. Aisha apne sir ko Ravi ke kandhe pe rakh deti, apne aap ko aise mehsoos karte hue jaise wo samajhi hui ho, jaise koi usse samajhta ho. Ek din, jab free period tha, wo dono school ki library mein chhup kar mil gaye. Kitabein ke ek row ke peeche, Aisha ne usse apne paas kheench liya, apne haath uske seene pe rakhte hue, aur wo usse apne kamar ke aas paas apne haath daal kar baandh liya. Unka pyaar aur gehra hota gaya, aur wo chhupke, apni hansiyon aur chhupay batoh ko daba rahe the.
+
+Lekin jaise-jaise din guzar rahe the, Ravi aur Aisha jaante the ki unka chhupa pyaar hamesha ke liye nahi reh sakta. Unke ghar walay kabhi bhi samajh nahi paayenge, aur jo duniya unke school ke bahar thi, wo unhe kabhi bhi saath nahi rakh sakegi. Fir bhi, un chhupay lamhon mein, unhone ek pyaar paaya jo pure aur sacche tha, ek aisa pyaar jo wo kabhi nahi bhoolenge, chahe wo ise chhupa kar rakhna pade.
+
+Jab tak wo apni zindagi mein ek dusre ke saath badhate gaye, Ravi aur Aisha ne un lamhon ka jashn manaya, jaise unhe pata tha ki unka pyaar, ek din, khatam ho jayega. Wo apni duniya mein, chhup kar, apna rishta jeene lage.
+
+Phir ek din, Ravi ko Aisha se ek message aayi. Uska voice thoda urgent tha, aur unhone apne favorite jagah—library mein milne ka faisla kiya. Jab Ravi wahan pahucha, Aisha window ke paas khadi thi, pehle se zyada udaasi ke saath. Aisha ne usse kaha, “Ravi, mere ghar walon ko humare baare mein pata chal gaya.” Ravi ka dil dooba. Aisha ne bataya ki uske ghar wale use dusre sheher bhejne wale the, school ke bahar, aur Ravi se door.
+
+Dono khade rahe, rokhne ki koshish karte hue. Phir Aisha ne kaha, “Hum alag nahi ho sakte, Ravi. Main tumhe kabhi nahi bhoolunga.” Unhone ek aakhri kiss li, jisme unka pyaar, unka dard aur unki umeedein jhankti thi. Aur jab wo door hue, dono samajh gaye ki yeh goodbye hai, ab ya kabhi nahi.
+
+Jaise Aisha ja rahi thi, Ravi ne use dekha, apne dil mein ek shikayat aur shukriya dono mehsoos karte hue. Usne apni zindagi mein ek aisa pyaar jeeya jo alag tha, ek pyaar jo kabhi bhi nahi bhulega.
+`; // Add the full Hindi story text here
+                document.title = "Story - Hindi"; // Update title
+            }
+        }
+    </script>
+</body>
+</html>

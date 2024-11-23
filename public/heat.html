@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Heat Between Us</title>
+    <link rel="stylesheet" href="secret-styles.css"> <!-- External CSS file -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Black background */
+        }
+
+        .story-container {
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+            padding-top: 100px; /* Adjust top padding */
+            background-color: black; /* Ensure background is black */
+        }
+
+        .story-content {
+            background-color: black;
+            color: white; /* Text color */
+            border: 2px solid gold; /* Golden border */
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px; /* Padding inside the container */
+            text-align: center; /* Center the text */
+            width: 80%; /* Width of the container */
+            max-width: 600px; /* Max width */
+            transition: transform 0.3s; /* Smooth transition for positioning */
+        }
+
+        .language-selection {
+            margin: 20px 0; /* Space above and below the language options */
+            font-size: 20px; /* Increase font size for options */
+            color: white; /* Set text color to white */
+        }
+
+        .language-option {
+            cursor: pointer; /* Pointer cursor for clickable text */
+            transition: color 0.3s; /* Smooth transition for hover effect */
+            text-decoration: none;
+            padding: 7px 20px;
+            border-radius: 8px;
+            border: none;
+            background-color: bisque;
+        }
+
+        .language-option:hover {
+            color: blue; /* Change color on hover */
+        }
+
+        .story-text {
+            margin-top: 20px; /* Space above the story text */
+            font-size: 24px; /* Increase text size */
+            font-family: 'Arial', sans-serif; /* Change the font family */
+        }
+
+        /* Additional spacing for English and Hindi sections */
+        .english-story, .hindi-story {
+            margin-bottom: 40px; /* Space between the two stories */
+        }
+
+        /* Class to move the container upwards smoothly */
+        .upward {
+            transform: translateY(-50px); /* Move the container upwards */
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="story-container">
+        <div class="story-content">
+            <h1>The Heat Between Us</h1>
+            <div class="language-selection">
+                <button class="language-option" onclick="selectLanguage('english')">English</button> | 
+                <button class="language-option" onclick="selectLanguage('hindi')">Hindi</button>
+            </div>
+            <div class="story-text">
+                <p id="story-content">This is the English version of the secret story.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set default language on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            selectLanguage('english');
+        });
+
+        function selectLanguage(language) {
+            const storyContent = document.getElementById("story-content");
+            const title = document.title;
+
+            if (language === 'english') {
+                storyContent.innerHTML = `Suman, a 28-year-old fashion designer, had always been the pillar of strength for her younger brother, Yadav, a 22-year-old college student. Living in bustling Mumbai, they shared a close bond shaped by childhood memories and unspoken support. Suman had been busy with her career, often missing family gatherings, but when she returned home for a brief break, Yadav was thrilled to have his sister back.
+
+One warm evening, Suman prepared their favorite snacks as Yadav entered the apartment, his eyes lighting up at the sight of her. They settled on the balcony with cups of chai, the sun setting behind them, painting the sky in hues of orange and pink. They reminisced about their childhood, laughing over stories of mischief and adventures.
+
+Suman noticed Yadav's pensive mood as he stared into the distance. After some prodding, he confessed his anxiety about college and his uncertain future. Suman listened intently, her heart aching for her brother. “Yadav, remember how we used to dream about our futures?” she said gently. “You’ve always had a passion for photography. You should pursue it!” Yadav nodded, but doubt clouded his eyes. Suman reached for his hand, giving it a reassuring squeeze, urging him to believe in himself as she did.
+
+Over the next few days, Suman and Yadav spent quality time together. They explored Mumbai’s vibrant streets, visiting art galleries and trendy cafes. During one of these outings, Yadav suggested showcasing his photography in an exhibition. Suman’s eyes sparkled with excitement. “Let’s do it! I’ll help you prepare,” she exclaimed, her enthusiasm infectious.
+
+They spent hours curating his work, discussing themes and selecting the best photos. Yadav felt invigorated, inspired by Suman’s unwavering support. As they worked late into the night, their laughter filled the apartment, deepening their bond.
+
+One evening, after a long day of preparation, Suman and Yadav found themselves alone in the living room, the soft glow of the lamps creating a cozy atmosphere. They shared stories and dreams, the air thick with an unspoken tension. As Suman playfully teased Yadav about his photography skills, he leaned closer, their faces just inches apart.
+
+In that moment, time seemed to freeze. Yadav’s heart raced, and he took a leap of faith. He leaned in and pressed his lips against Suman's, a gentle kiss filled with warmth and affection. Suman was taken by surprise but melted into the moment, returning the kiss tenderly. The kiss deepened as they lost themselves in the intimacy, the world around them fading away.
+
+After a moment that felt like eternity, they pulled back, breathless. Suman’s cheeks flushed as she looked into Yadav’s eyes, both surprised and exhilarated by what had just happened. “I didn’t expect that,” she whispered, a shy smile spreading across her face.
+
+“Me neither,” Yadav replied, his heart pounding. “But it felt right.” They shared a knowing look, realizing the depth of their bond had shifted into something more profound.
+
+As the days passed, Suman and Yadav continued to explore this new dynamic while maintaining their supportive relationship. The day of Yadav’s photography exhibition arrived, and Suman stood proudly by his side, beaming as guests praised his work. After the exhibition, they found a quiet moment amidst the celebration. Yadav turned to Suman, gratitude shining in his eyes. “Thank you for always believing in me, Suman. I wouldn’t have done this without you.” He hugged her tightly, and she smiled, feeling the warmth of their connection.
+
+As Suman’s time in Mumbai came to an end, she prepared to move to Bangalore for work. On her last evening, Yadav surprised her with a framed photo of them from the exhibition. “A reminder of how far we’ve come,” he said, his voice full of emotion. Suman’s heart swelled with pride. “No matter where I go, I’ll always be there for you,” she promised, embracing him once more.
+
+With Suman in Bangalore and Yadav completing his college in Mumbai, they kept in touch through video calls, sharing updates about their lives and encouraging each other. Yadav continued to pursue his photography, thriving under Suman’s guidance, while she flourished in her fashion career, always cheering for her brother from afar.
+
+Their bond remained unbreakable, proving that love and support between siblings can weather any storm. The heat between them was not just a fleeting moment; it was a testament to their enduring connection, built on trust, respect, and unwavering belief in each other. `; // Add the full English story text here
+                document.title = "Story - English"; // Update title
+            } else {
+                storyContent.innerHTML = `Suman, ek 28 saal ki fashion designer, hamesha apne chote bhai Yadav ke liye ek taakat ka stambh rahi hai, jo 22 saal ka college student hai. Mumbai ke bheed-bhaad wale sheher mein rehkar, unka rishta bachpan ki yaadon aur ankahe sahare se bana hai. Suman apne career mein bahut busy thi, aksar parivaarik sammelan miss karti thi, par jab woh chhoti si chutti par ghar aayi, toh Yadav uski wapas aane par khush tha.
+
+Ek garm shaam, Suman ne unke pasandida snacks banaye jab Yadav apartment mein aaya, uski aankhein Suman ko dekhkar chamak uthi. Dono balcony par chai ke saath baithe, suraj unke peeche dhal raha tha, aasman ko orange aur pink rangon se bharta hua. Unhone apne bachpan ki yaadon ko yaad kiya, shararat aur adventure ki kahaniyon par hasta rahe.
+
+Suman ne dekha ki Yadav udaas hai, dur dekhte hue. Thodi der tak samjhaane par, usne apne college aur apne bhavishya ke baare mein chinta vyakt ki. Suman ne dhyan se suna, uska dil bhai ke liye dard bhara. "Yadav, yaad hai jab hum apne bhavishya ke sapne dekhte the?" usne pyaar se kaha. "Tumhare paas hamesha photography ka junoon raha hai. Tumhe isse pursue karna chahiye!" Yadav ne sir hilaaya, lekin uski aankhon mein shak tha. Suman ne uska haath pakadte hue usse himmat di, jaise woh uspar vishwas karti hai.
+
+Agle kuch din, Suman aur Yadav ne saath mein waqt bitaya. Dono Mumbai ki vibrant galiyon mein ghoome, art galleries aur trendy cafes ka chakkar lagaya. Ek outing par, Yadav ne suggest kiya ki woh apni photography ka exhibition kare. Suman ki aankhein khushi se chamak gayi. "Chalo, karte hain! Main tumhe tayyari mein madad karungi," usne utsah se kaha.
+
+Unhone uski photos ko curate karne mein ghanton tak kaam kiya, themes par charcha ki, aur best photos chuni. Yadav ko umang mehsoos hui, Suman ki unwavering support se prerit hokar. Jab woh raat bhar kaam karte rahe, unka hasi mazak unke apartment ko bharta raha, unka rishta aur gehra hota gaya.
+
+Ek shaam, ek lambi din ki tayyari ke baad, Suman aur Yadav akela living room mein baithe, lamps ki naram roshni ek cozy atmosphere bana rahi thi. Unhone kahaniyan aur sapne saanjha kiye, hawa mein ek ankahe tanav ki bhavna thi. Jab Suman ne mazak mein Yadav ki photography skills par tease kiya, woh aur kareeb aaya, unke chehre sirf kuch inches door the.
+
+Us pal, samay jaise thak gaya. Yadav ka dil tez dhadak raha tha, aur usne ek kadam aage badhne ka faisla kiya. Woh aaya aur Suman ke hothon par apni hothon ko rakha, ek naram kiss jo garmi aur pyaar se bhari thi. Suman hairaan thi lekin us pal mein kho gayi, wapas kiss karte hue. Kiss gehra hota gaya jab woh ek dusre mein kho gaye, aas-paas ki duniya bhool gaye.
+
+Kuch lamhon ke baad, jab unhone apne aap ko alag kiya, toh unki saansen tez thi. Suman ke gaal laal ho gaye jab usne Yadav ki aankhon mein dekha, dono hairaan aur khush the jo kuch abhi hua. "Maine iski umeed nahi ki thi," usne fursat se kaha, ek sharmaati muskurahat uske chehre par thi.
+
+"Main bhi nahi," Yadav ne kaha, uska dil abhi tak dhadak raha tha. "Lekin yeh sahi laga." Unhone ek samajh ki nazar milayi, samajhte hue ki unka rishta ab kuch aur gehra ho gaya tha.
+
+Agle dinon mein, Suman aur Yadav ne is naye rishta ko samjhne ki koshish ki, jab tak unka supportive rishta bana raha. Yadav ki photography exhibition ka din aaya, aur Suman uske saath khadi rahi, guests se uske kaam ki prashansa sunte hue. Exhibition ke baad, unhone celebration ke beech ek shant pal dhoondha. Yadav ne Suman ki taraf dekha, uski aankhon mein krutagnata thi. "Mujhe hamesha mera vishwas rakhne ke liye shukriya, Suman. Main yeh sab tumhare bina nahi kar pata." Usne use ghalai se ghalaya, aur Suman muskurai, unke rishta ki garmi mehsoos karte hue.
+
+Jaise-jaise Suman ka Mumbai mein rehna khatam hota gaya, woh Bangalore mein kaam karne ke liye tayyar ho gayi. Apne aakhri shaam par, Yadav ne use exhibition se unka ek framed photo diya. "Ek yaadgar ki tarah ki humne kitna door tay kiya hai," usne kaha, uski aawaz mein bhavna thi. Suman ka dil garv se bhar gaya. "Jahan bhi jaungi, main hamesha tumhare liye wahan rahungi," usne vaada kiya, ek baar phir use gale lagate hue.
+
+Suman Bangalore mein aur Yadav Mumbai mein apne college ko poora karte hue, unhone video calls ke through sampark bana rakha, apne jeevan ki updates share karte hue aur ek dusre ko prerit karte hue. Yadav ne apni photography par dhyan diya, Suman ki guidance mein thrive karte hue, jabki woh apne fashion career mein aage badhi, hamesha door se apne bhai ke liye cheer karte hue.
+
+Unka rishta kabhi bhi tutne wala nahi tha, yeh sabit karta hua ki bhai-behan ke beech pyaar aur support kisi bhi toofan ko jhel sakta hai. Unke beech ki garmi sirf ek pal ki baat nahi thi; yeh unki durachari sambandh ka pramaan tha, jo vishwas, samman, aur ek dusre par anwarpita vishwas se bana tha.`; // Add the full Hindi story text here
+                document.title = "Story - Hindi"; // Update title
+            }
+        }
+    </script>
+</body>
+</html>

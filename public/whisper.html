@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whispers At The Night</title>
+    <link rel="stylesheet" href="secret-styles.css"> <!-- External CSS file -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Black background */
+        }
+
+        .story-container {
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+            padding-top: 100px; /* Adjust top padding */
+            background-color: black; /* Ensure background is black */
+        }
+
+        .story-content {
+            background-color: black;
+            color: white; /* Text color */
+            border: 2px solid gold; /* Golden border */
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px; /* Padding inside the container */
+            text-align: center; /* Center the text */
+            width: 80%; /* Width of the container */
+            max-width: 600px; /* Max width */
+            transition: transform 0.3s; /* Smooth transition for positioning */
+        }
+
+        .language-selection {
+            margin: 20px 0; /* Space above and below the language options */
+            font-size: 20px; /* Increase font size for options */
+            color: white; /* Set text color to white */
+        }
+
+        .language-option {
+            cursor: pointer; /* Pointer cursor for clickable text */
+            transition: color 0.3s; /* Smooth transition for hover effect */
+            text-decoration: none;
+            padding: 7px 20px;
+            border-radius: 8px;
+            border: none;
+            background-color: bisque;
+        }
+
+        .language-option:hover {
+            color: blue; /* Change color on hover */
+        }
+
+        .story-text {
+            margin-top: 20px; /* Space above the story text */
+            font-size: 24px; /* Increase text size */
+            font-family: 'Arial', sans-serif; /* Change the font family */
+        }
+
+        /* Additional spacing for English and Hindi sections */
+        .english-story, .hindi-story {
+            margin-bottom: 40px; /* Space between the two stories */
+        }
+
+        /* Class to move the container upwards smoothly */
+        .upward {
+            transform: translateY(-50px); /* Move the container upwards */
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="story-container">
+        <div class="story-content">
+            <h1>Whispers At The Night</h1>
+            <div class="language-selection">
+                <button class="language-option" onclick="selectLanguage('english')">English</button> | 
+                <button class="language-option" onclick="selectLanguage('hindi')">Hindi</button>
+            </div>
+            <div class="story-text">
+                <p id="story-content">This is the English version of the secret story.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set default language on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            selectLanguage('english');
+        });
+
+        function selectLanguage(language) {
+            const storyContent = document.getElementById("story-content");
+            const title = document.title;
+
+            if (language === 'english') {
+                storyContent.innerHTML = `In a quiet town, nestled between rolling hills, there stood an old family home where traditions ran deep. The house had seen many seasons, and tonight, it was alive with the soft glow of warm lights and laughter. The air was fragrant with the scent of freshly baked cookies, a staple of family gatherings.
+
+Characters Introduced
+Aditi had always loved these family get-togethers, especially since she married her husband, Vikram. Vikram’s older brother, Sameer, had been an important part of her life ever since they met. Sameer was charming, with a warm smile and a protective nature. He had always treated her like a sister, but lately, she felt something deeper simmering beneath the surface.
+
+The Gathering
+As the evening wore on, the family gathered in the living room, playing games and sharing stories. Aditi couldn’t help but steal glances at Sameer. He was animatedly recounting a funny incident from his childhood, his laughter infectious. There was a comfort in their interactions, but also a tension that was hard to ignore.
+
+When Vikram went to help in the kitchen, Aditi found herself sitting next to Sameer on the couch. They exchanged smiles, and the air between them felt charged, as if they both were aware of an unspoken bond that was growing stronger.
+
+A Quiet Moment
+As the evening drew to a close and the guests began to leave, Aditi and Sameer found themselves alone on the porch, overlooking the quiet street illuminated by the soft glow of street lamps.
+
+“It’s nice out here,” Aditi said, taking a deep breath of the cool night air. “So peaceful.”
+
+Sameer leaned back in his chair, his eyes reflecting the moonlight. “Yeah, it’s one of my favorite spots. Sometimes, it’s nice to just escape the chaos inside.”
+
+Aditi nodded, her heart racing slightly as she realized how close they were sitting. The warmth of his presence wrapped around her, and she felt a flutter of emotions she couldn’t quite place.
+
+Unspoken Words
+For a moment, they sat in comfortable silence, listening to the night sounds—the chirping of crickets and the gentle rustle of leaves. Then, out of nowhere, Sameer broke the silence.
+
+“Aditi, can I ask you something?” His voice was serious, and she turned to him, curiosity piqued.
+
+“Of course, what is it?” she replied, her heart pounding.
+
+“Have you ever felt… like there’s something more between us? Something that goes beyond just being family?” His words hung in the air, and Aditi felt her breath catch.
+
+The question took her by surprise. She had sensed it too but had pushed the feelings aside, trying to convince herself it was just her imagination. Now that he had said it out loud, her heart raced.
+
+“I… I don’t know, Sameer,” she stammered, her cheeks flushing. “I care about you a lot, but…”
+
+“But what?” Sameer leaned closer, his eyes searching hers, filled with an intensity that made her pulse quicken.
+
+Confession Under the Stars
+“Sometimes, I feel like there’s a connection between us that I can’t explain,” he continued, his voice barely above a whisper. “When I’m with you, everything feels different.”
+
+Aditi felt a warmth spread through her chest, a mix of fear and excitement. “I’ve felt it too,” she admitted, her voice trembling slightly. “But we shouldn’t… we can’t. It’s complicated.”
+
+“I know it is,” Sameer replied, his expression softening. “But sometimes, I wonder if it’s worth exploring. What if we’re missing out on something beautiful?”
+
+The tension hung thick between them, and Aditi’s mind raced with thoughts of her marriage and the potential consequences of crossing that line. Yet, there was something intoxicating about the way Sameer looked at her, as if he understood her in ways no one else did.
+
+The Turning Point
+Before she could respond, Sameer reached out, brushing a strand of hair behind her ear. The simple touch sent shivers down her spine. “I don’t want to complicate things for you, Aditi. I just can’t ignore how I feel.”
+
+She leaned into his touch, her heart conflicted. “Sameer, I—”
+
+Suddenly, Vikram’s voice called from inside the house, breaking the moment. “Aditi, come help me with the last of the dishes!”
+
+Both of them jumped back as if they had been caught in a moment they weren’t supposed to share. Aditi’s heart sank as she realized how close they had come to crossing a line they might never be able to uncross.
+
+Avoiding the Truth
+The rest of the night felt different. Aditi helped Vikram in the kitchen, forcing herself to laugh and engage in conversation, but her mind kept drifting back to the porch and Sameer’s confession.
+
+After everything was cleaned up and everyone had said their goodbyes, Aditi found herself alone in her room, staring at the ceiling. Thoughts of Sameer flooded her mind. The connection they shared felt undeniable, yet the thought of betrayal loomed heavily over her heart.
+
+The Next Day
+The next morning, Aditi decided to take a walk in the garden to clear her mind. As she walked among the blooming flowers, she heard a familiar voice behind her.
+
+“Hey, Aditi,” Sameer called, catching up with her. He looked a bit nervous, running a hand through his hair.
+
+“Hi, Sameer,” she replied, trying to keep her tone light. But her heart raced at the sight of him.
+
+“Can we talk?” he asked, his eyes serious.
+
+Aditi nodded, leading him to a secluded spot near the old oak tree. The morning sun filtered through the leaves, casting playful shadows on the ground.
+
+“I didn’t mean to make things awkward last night,” Sameer said, his voice low. “I just needed to be honest about how I feel.”
+
+Aditi took a deep breath, the weight of his words pressing on her. “I appreciate your honesty, Sameer, but we really need to think about what this means. It’s not just about us.”
+
+“I know, but can we at least explore this feeling together? I don’t want to hide it anymore,” he pleaded, stepping closer.
+
+The Heart’s Dilemma
+Aditi’s heart raced as she considered his words. She had spent so long denying her feelings, trying to keep everything in check. “What if this ruins everything? What if it changes how we see each other? Or how I see Vikram?”
+
+“I can’t promise it won’t be complicated,” Sameer said, his gaze unwavering. “But I believe it could be something special. Something worth the risk.”
+
+As they stood there, the tension palpable, Aditi felt torn. She wanted to give in to her feelings, to explore this connection that had been building between them, but the fear of the unknown loomed large.
+
+The Night of Confession
+That night, Aditi lay awake, staring at the ceiling, replaying every moment of the day. Sameer’s words echoed in her mind, and she felt a pull toward him that was impossible to ignore.
+
+Finally, she decided she needed to confront her feelings. She quietly got out of bed, trying not to wake Vikram, and slipped outside to the porch where she had shared that pivotal moment with Sameer.
+
+As she sat down, she heard footsteps behind her. It was Sameer, looking surprised to see her.
+
+“I wasn’t sure if you’d come,” he said, his voice soft.
+
+“I needed to talk,” Aditi replied, her heart racing.
+
+The Unveiling of Emotions
+“I’ve thought a lot about what you said,” she began, her voice steady but her heart pounding. “And I can’t deny that there’s something between us. But what do we do with that? I don’t want to hurt Vikram or destroy what we have as a family.”
+
+Sameer stepped closer, his eyes searching hers. “I don’t want to hurt anyone either, but I also don’t want to pretend that we don’t have these feelings. We owe it to ourselves to explore what this could be.”
+
+Aditi felt a wave of emotions wash over her. She wanted to say yes, to embrace the feelings that had been bubbling under the surface, but the fear of consequences held her back.
+
+“Can we take it slow? Just figure it out without jumping into anything?” she suggested, her heart hopeful yet cautious.
+
+“Of course,” Sameer said, relief washing over his face. “I just want to be close to you, however that looks.”
+
+An Intimate Moment
+As they continued to talk, the distance between them closed. The night felt charged with unspoken desire, and Aditi felt herself leaning closer, drawn to him. Sameer’s eyes darkened with intensity as he reached out, his hand gently cupping her cheek.
+
+“Aditi,” he whispered, his breath warm against her skin. “I want you to know how much you mean to me.”
+
+Before she could reply, he leaned in, capturing her lips with his. The kiss was soft at first, tentative, but as Aditi melted into him, it deepened, igniting a fire within her. She wrapped her arms around his neck, feeling the heat radiate between them.
+
+Their kisses grew more passionate, filled with the longing that had been building for so long. Aditi felt a rush of emotions—fear, excitement, and desire intertwining as Sameer pulled her closer, their bodies pressed together they were enjoying the moment and the night passed away Aditi woke up the next morning, her heart racing as she remembered the night before. She slipped out of bed, careful not to wake Sameer, feeling both exhilarated and guilty. As she walked through the house, the scent of breakfast reminded her of Vikram, her husband, and the life they had built together.
+
+In the kitchen, Vikram greeted her cheerfully, oblivious to the turmoil within her. As they ate, Aditi felt the weight of her secret pressing down on her.
+
+Later that day, Sameer appeared at the garden, his expression serious. “Can we talk?” he asked softly.
+
+Aditi nodded, leading him to a secluded spot. “About last night… it was amazing, but we need to figure out what it means.”
+
+“I don’t regret it,” Sameer confessed, his eyes intense. “But I know we can’t continue this. I care about you too much to hurt Vikram.”
+
+Tears filled Aditi's eyes as she realized the truth. “I love Vikram. I can’t lose him.,
+
+Sameer stepped closer, his voice barely above a whisper. “Then we need to end this, for all our sakes.”
+
+They shared a final, lingering gaze, knowing this would be their last moment together. With heavy hearts, they parted ways, each carrying the weight of unfulfilled love but determined to honor their commitments.
+
+In the months that followed, Aditi found solace in her marriage, cherishing the bond she had with Vikram. While memories of Sameer lingered, she learned to navigate the complexities of love and loyalty, embracing the beauty of connection while remaining true to her heart. `; // Add the full English story text here
+                document.title = "Story - English"; // Update title
+            } else {
+                storyContent.innerHTML = `Ek shaant sheher mein, jo leherate hue pahadon ke beech tha, ek purana parivaar ka ghar tha jahan paramparaen gehri thi. Ghar ne kai mausamon ko dekha tha, aur aaj raat, yeh garam roshni aur hansi se bhara hua tha. Hawa mein nayi bani cookies ki khushboo thi, jo parivaarik milan ki ek vishesh pehchaan thi.
+
+Kirdar Parichit
+
+Aditi ko hamesha se yeh parivaarik milan bahut pasand tha, khaas taur par jab se usne apne pati, Vikram, se shaadi ki thi. Vikram ka bada bhai, Sameer, uski zindagi ka ek mahatvapurn hissa tha jab se unki mulaqat hui thi. Sameer charming tha, uski muskurahat mein warmth thi aur woh protective nature ka tha. Usne hamesha Aditi ko behen ki tarah treat kiya tha, lekin aakhri kuch samay se, usne mehsoos kiya ki kuch gehra unke beech hai jo ubal raha hai.
+
+Milan
+
+Jaise-jaise shaam aage badhi, parivaar living room mein ikattha hua, khel khelte hue aur kahaniyaan baat karte hue. Aditi ko baar-baar Sameer ki taraf dekhta paya gaya. Woh apne bachpan ka ek mazedaar kissa suna raha tha, uski hansi sab par asar daal rahi thi. Unke beech ki baatein sukhad thi, lekin ek tanav bhi tha jise ignore karna mushkil tha.
+
+Jab Vikram kitchen mein madad karne gaya, Aditi ne khud ko Sameer ke saath couch par baitha paaya. Unhone ek dusre ko muskurahat di, aur unke beech ka hawa ka mahol aisa tha jaise dono ek ankahe rishtay ko mehsoos kar rahe ho jo aur majboot hota ja raha hai.
+
+Ek Shaant Pal
+
+Jaise hi shaam khatam hone lagi aur mehmaan jaane lage, Aditi aur Sameer porch par akeli mil gaye, jo shaant gali ke nazare ko dekh rahe the jo street lamps ki naram roshni se jagmag raha tha.
+
+“Yahaan bahut accha hai,” Aditi ne kaha, thandi raat ki hawa ko mehsoos karte hue. “Bahut shaant hai.”
+
+Sameer apne kursi par jhuka, uski aankhein chandni ki roshni mein chamak rahi thi. “Haan, yeh meri pasandida jagah hai. Kabhi-kabhi, andar ke shor se bachna accha hota hai.”
+
+Aditi ne haan mein sir hilaaya, uska dil thoda tez dhadak raha tha jab usne mehsoos kiya ki woh kitne kareeb baithte hain. Uski maujoodgi ka garmi uske charon taraf lapet gayi, aur usne ek aise jazbaat ka ehsaas kiya jo woh sahi tarah se nahi samajh pa rahi thi.
+
+Ankahe Shabd
+
+Ek pal tak, woh aise hi chup-chaap baithe rahe, raat ki awazein sunte hue—chirping of crickets aur patton ka naram sarsarahat. Phir, beech mein kuch anjaana hota hai, Sameer ne khamoshi ko tod diya.
+
+“Aditi, kya main tumse kuch pooch sakta hoon?” Uski awaaz gambi rahti thi, aur usne uski taraf dekha, jise sunne ki joshilahat thi.
+
+“Bilkul, kya hai?” usne jawab diya, uska dil tezi se dhadak raha tha.
+
+“Kya tumne kabhi mehsoos kiya hai... ki humare beech kuch aur hai? Kuch jo sirf parivaar se aage hai?” Uske shabd hawa mein kho gaye, aur Aditi ka saans rukh gaya.
+
+Uska sawaal usse hairan kar gaya. Usne bhi mehsoos kiya tha lekin apne jazbaat ko dabaane ki koshish ki thi, apne aap ko samjhaate hue ki yeh sirf uski kalpana hai. Ab jab usne yeh shabd bol diye, uska dil tezi se dhadak raha.
+
+“Main... main nahi jaanti, Sameer,” usne stammer kiya, uski galo mein laalima chha gayi. “Main tumhe bahut care karti hoon, lekin…”
+
+“Lekin kya?” Sameer aur kareeb aaya, uski aankhein uski aankhon mein kho gayi, uski aankhon mein ek aisi intensity thi jo uski dhadkan tezi se badha rahi thi.
+
+Confession Under the Stars
+
+“Kabhi-kabhi, mujhe lagta hai ki humare beech ek connection hai jise main samjha nahi sakta,” usne jaari rakha, uski awaaz shor se kam. “Jab main tumhare saath hota hoon, sab kuch alag mehsoos hota hai.”
+
+Aditi ke dil mein garmi mehsoos hui, dar aur excitement ka ek mishran. “Maine bhi yeh mehsoos kiya hai,” usne kaha, uski awaaz thodi kaanp rahi thi. “Lekin humein… nahi karna chahiye. Yeh complicated hai.”
+
+“Mujhe pata hai yeh complicated hai,” Sameer ne kaha, uska chehra naram hota gaya. “Lekin kabhi-kabhi, main sochta hoon ki kya yeh khoj karne layak hai. Kya agar hum kuch khoobsurat chhod rahe hain?”
+
+Unke beech ka tanav gahan ho gaya, aur Aditi ka dimaag uski shaadi aur uss line ko cross karne ke sambhavit parinaamon par bhaag raha tha. Phir bhi, Sameer ki nazar mein aisi baat thi, jaise woh usse samajhta tha jo koi aur nahi samajh paata.
+
+Intimate Moment
+
+Jaise hi unhone ek dusre ki aankhon mein dekha, Aditi ne mehsoos kiya ki uski saans tezi se chal rahi hai. Sameer ne dheere se uska haath pakda, uske haath ki naram aur pyaari mehsoos karte hue.
+
+“Yeh sirf dosti nahi hai, Aditi,” usne kaha, uska chehra kareeb aa gaya. “Mujhe tumhari zarurat hai.”
+
+Aditi ka dil dhadak gaya. “Sameer…” usne kahte-kahte khud ko roka, lekin uski aankhein usse kuch aur keh rahi thi.
+
+Woh ek dusre ke kareeb aaye, aur achanak Sameer ne uska chehra apne haath mein le liya, uski aankhein uski aankhon mein kho gayi. Usne dheere se apna mukh uski taraf badhaya, aur unhone pehli baar ek dusre ke hothon ko chhu liya. Yeh ek naram, aasan chumban tha jo un dono ke beech ke saare bhaavnaon ko ek saath le aaya.
+
+Turning Point
+
+Kuch pal tak, woh aise hi rahe, unki hothon ki chudi hui garmi unhe behad chhu rahi thi. Us pal mein unhone sab kuch bhool gaya—apne parivaar, apni responsibilities, aur unke beech ki doori.
+
+“Main tumhe complicated karna nahi chahta, Aditi,” Sameer ne kaha, uska chehra naram hota gaya. “Main bas yeh mehsoos nahi kar sakta ki kaise mehsoos karta hoon.”
+
+Usne uski chhoo lene ka ehsaas kiya, uska dil uljhan mein tha. “Sameer, main—”
+
+Achaanak, Vikram ki awaaz ghar se aayi, jo unke pal ko tod rahi thi. “Aditi, aakhri bar dishes mein madad karo!”
+
+Dono ek saath jhatak gaye jaise unhe kisi aise pal mein pakda gaya ho jahan unhe nahi hona chahiye tha. Aditi ka dil uda hua mehsoos hua jab usne samjha ki woh kitne kareeb aa gaye the ek aisi line ko cross karne ke liye jise woh kabhi nahi kar sakte the.
+
+Sachai Se Door Rehna
+
+Baaki raat alag mehsoos hui. Aditi ne Vikram ki madad ki kitchen mein, apne aap ko hasta-khelta aur baatein karne par majboor kiya, lekin uska dimaag baar-baar porch aur Sameer ke confession ki taraf bhaag raha tha.
+
+Sab kuch saaf hone ke baad aur sabne alvida keh diya, Aditi akeli apne kamre mein paayi, chhat ko dekhte hue. Sameer ki yaadein uske dimaag mein goonj rahi thi, aur usne socha ki kya unke beech ki yeh khoj unke liye khud ko khojkar de sakti hai ya sirf ek moment tha jo unhe dard aur uljhan mein daal dega.
+
+Usne socha ki kabhi-kabhi rishtey itne samajhne waale nahi hote, lekin khud ko dhundhna hamesha zaroori hota hai.
+
+`; // Add the full Hindi story text here
+                document.title = "Story - Hindi"; // Update title
+            }
+        }
+    </script>
+</body>
+</html>

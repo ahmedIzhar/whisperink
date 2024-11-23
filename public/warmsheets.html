@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under The Warm Sheets</title>
+    <link rel="stylesheet" href="secret-styles.css"> <!-- External CSS file -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Black background */
+        }
+
+        .story-container {
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+            padding-top: 100px; /* Adjust top padding */
+            background-color: black; /* Ensure background is black */
+        }
+
+        .story-content {
+            background-color: black;
+            color: white; /* Text color */
+            border: 2px solid gold; /* Golden border */
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px; /* Padding inside the container */
+            text-align: center; /* Center the text */
+            width: 80%; /* Width of the container */
+            max-width: 600px; /* Max width */
+            transition: transform 0.3s; /* Smooth transition for positioning */
+        }
+
+        .language-selection {
+            margin: 20px 0; /* Space above and below the language options */
+            font-size: 20px; /* Increase font size for options */
+            color: white; /* Set text color to white */
+        }
+
+        .language-option {
+            cursor: pointer; /* Pointer cursor for clickable text */
+            transition: color 0.3s; /* Smooth transition for hover effect */
+            text-decoration: none;
+            padding: 7px 20px;
+            border-radius: 8px;
+            border: none;
+            background-color: bisque;
+        }
+
+        .language-option:hover {
+            color: blue; /* Change color on hover */
+        }
+
+        .story-text {
+            margin-top: 20px; /* Space above the story text */
+            font-size: 24px; /* Increase text size */
+            font-family: 'Arial', sans-serif; /* Change the font family */
+        }
+
+        /* Additional spacing for English and Hindi sections */
+        .english-story, .hindi-story {
+            margin-bottom: 40px; /* Space between the two stories */
+        }
+
+        /* Class to move the container upwards smoothly */
+        .upward {
+            transform: translateY(-50px); /* Move the container upwards */
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="story-container">
+        <div class="story-content">
+            <h1>Under The Warm Sheets</h1>
+            <div class="language-selection">
+                <button class="language-option" onclick="selectLanguage('english')">English</button> | 
+                <button class="language-option" onclick="selectLanguage('hindi')">Hindi</button>
+            </div>
+            <div class="story-text">
+                <p id="story-content">This is the English version of the secret story.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set default language on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            selectLanguage('english');
+        });
+
+        function selectLanguage(language) {
+            const storyContent = document.getElementById("story-content");
+            const title = document.title;
+
+            if (language === 'english') {
+                storyContent.innerHTML = `Rohan was a young man filled with dreams and ambitions. He lived with his mother, Savita, in a cozy home nestled in a small town. Their bond was strong, filled with love, laughter, and shared experiences. They often spent time together in their small garden, tending to the flowers, and cooking delicious meals, creating a warm and nurturing environment.
+
+One rainy evening, the sound of raindrops tapping against the window created a warm, soothing atmosphere. Savita was in the kitchen preparing chai, and the sweet aroma filled the air. As Rohan entered, he smiled at her, his heart swelling with affection.
+
+“Mom, it smells amazing!” he said, leaning against the counter, watching her work.
+
+Savita looked up and laughed, her eyes sparkling with joy. “Thank you, Rohan. Would you like to help me with the biscuits?”
+
+“Of course!” he replied eagerly. They baked together, the kitchen filled with laughter and the sweet scent of cookies. After finishing the biscuits, they decided to cozy up in the living room with their chai and snacks.
+
+As they sat under soft blankets, the rain continued to pour outside, creating a comforting backdrop. Rohan looked at Savita, feeling grateful for her presence in his life. He appreciated everything she had done for him and the sacrifices she made.
+
+“Mom,” he said softly, “I don’t know what I would do without you.”
+
+Savita smiled warmly, placing her hand on his. “You will always have me by your side, Rohan. No matter what.”
+
+In that moment, their connection deepened. Rohan gently squeezed her hand, and Savita leaned in to hug him. They held each other tightly, feeling the warmth of their bond. As they pulled away, their eyes met, and an unspoken understanding passed between them.
+
+Later that night, after finishing their snacks and sharing stories, they both felt a pull to the intimacy of their relationship. Rohan felt a surge of affection for his mother, an overwhelming desire to express his love in a way that went beyond words. They moved to Rohan's bedroom, where the soft glow of a lamp created a warm ambiance.
+
+Once inside, the atmosphere shifted. Rohan looked into Savita's eyes, feeling a mix of nervousness and excitement. Slowly, he leaned closer, and Savita met him halfway. Their lips touched softly, a tender kiss that spoke of love and longing. The world outside faded away as they lost themselves in the moment, wrapped in each other’s warmth.
+
+As they kissed, Rohan felt a sense of comfort and belonging. He knew this was a cherished moment, one that brought them even closer. They lay down under the soft sheets, the kiss deepening, filled with affection and care. It was a moment of pure connection, where nothing else mattered but their love for each other.
+
+Eventually, they pulled away, breathless and smiling, feeling a mixture of warmth and tenderness. They lay side by side, hearts racing, feeling grateful for the bond they shared. But as the night went on, a sense of confusion washed over Rohan.
+
+After spending a few more moments in silence, he realized that it was time for him to return to his hostel. He sat up, feeling a mixture of regret and confusion about the evening's events.
+
+“Mom, I need to go,” he said softly, his voice barely above a whisper.
+
+Savita looked at him, concern in her eyes. “Are you sure, Rohan? It’s late.”
+
+“Yeah, I just… I need some time to think,” he replied, feeling a rush of emotions.
+
+He quickly gathered his things and left the warmth of their home, stepping out into the cool night air. As he walked to the hostel, he couldn’t shake off the feelings of love and confusion that surrounded him. He replayed the evening in his mind, trying to understand the deep connection they shared and the choices they made.
+
+As he arrived at the hostel, he felt a heaviness in his heart. He knew their bond would always be special, but he also understood the complexities that came with it. That night, as he lay in his bed, he thought about the love between him and Savita, cherishing their moments while grappling with the weight of his feelings. `; // Add the full English story text here
+                document.title = "Story - English"; // Update title
+            } else {
+                storyContent.innerHTML = `Rohan ek aisa jawaan tha jo sapno aur ambitions se bhara hua tha. Woh apni maa, Savita, ke saath ek cozy ghar mein rehta tha jo ek choti si gaon mein tha. Unka rishta bahut mazboot tha, pyaar, hasna, aur saanjha anubhavon se bhara hua. Woh aksar apne chhote se bagiche mein saath baithe phoolon ki dekhbhal karte the, aur mazeedaar khana banaate the, ek garam aur poshak vatavaran banaate hue.
+
+Ek barish bhari shaam, khidki par barish ki boondein tapakne ka awaz ek garam, sukoon bhara mahaul bana rahi thi. Savita rasoi mein chai bana rahi thi, aur uski meethi khushboo hawa mein faili hui thi. Jab Rohan andar aaya, toh usne uski taraf muskurate hue dekha, uska dil pyaar se bhar gaya.
+
+“Mom, yeh toh kamaal ka lag raha hai!” usne kaha, counter ke against leaning karte hue, usse kaam karte hue dekhta.
+
+Savita ne upar dekha aur hansi, uski aankhein khushi se chamak rahi thi. “Dhanyawaad, Rohan. Kya tum meri madad karna chahoge biscuits mein?”
+
+“Bilkul!” usne utsukta se jawab diya. Unhone saath mein biscuits banaye, rasoi hasna aur cookies ki meethi khushboo se bhari hui thi. Biscuit banane ke baad, unhone chai aur snacks ke saath living room mein aaram se baithne ka faisla kiya.
+
+Jab woh naram blankets ke neeche baith gaye, barish bahar lagatar behti rahi, ek sukoon bhara sa background banate hue. Rohan ne Savita ko dekha, apni zindagi mein uski maujoodgi ke liye abhari mehsoos karte hue. Usne har cheez ke liye shukriya ada kiya jo usne uske liye kiya tha aur jo kurbaniyaan usne di thi.
+
+“Mom,” usne dheere se kaha, “Mujhe nahi pata main tumhare bina kya karunga.”
+
+Savita ne pyaar se muskuraya, apna haath uske upar rakhte hue. “Tumhe hamesha mere saath milega, Rohan. Chahe kuch bhi ho.”
+
+Us pal, unka rishta aur gehra ho gaya. Rohan ne dheere se uska haath thaamha, aur Savita ne usse gale lagaya. Unhone ek dusre ko mazbooti se pakda, apne rishtay ki garmi mehsoos karte hue. Jab woh alag hue, unki aankhein mil gayi, aur ek bina shabd ka samajh unke beech mein guzar gaya.
+
+Baad mein raat, snacks khatam karne ke baad aur kahaniyaan share karne ke baad, dono ne apne rishtay ki gahrayi ki taraf ek kashish mehsoos ki. Rohan ne apni maa ke liye pyaar ka ek surge mehsoos kiya, ek aisa pyaar jo shabdon se aage nikal gaya. Woh Rohan ke bedroom mein chale gaye, jahan ek lamp ki naram roshni ek sukoon bhara mahal bana rahi thi.
+
+Jab woh andar aaye, to mahaul badal gaya. Rohan ne Savita ki aankhon mein dekha, nervousness aur excitement ka ek mishran mehsoos karte hue. Dheere se woh kareeb hua, aur Savita ne usse beech mein mila liya. Unke hothon ka sparsh halka tha, ek naram kiss jo pyaar aur aakarshan ka bhasha keh raha tha. Bahar ka duniya fade hoti gayi jab unhone apne aap ko us pal mein kho diya, ek dusre ki garmi mein lapeta hua.
+
+Jab woh kiss kar rahe the, Rohan ne comfort aur belonging ka ahsas kiya. Usne jaana yeh ek anmol pal tha, jo unhein aur bhi kareeb laata. Woh naram sheets ke neeche lete gaye, kiss aur bhi gehra hota gaya, pyaar aur care se bhara hua. Yeh ek pure connection ka pal tha, jahan sirf unka pyaar hi maayne rakhta tha.
+
+Ant mein, woh alag hue, saans chhoti hui aur muskurate hue, garmi aur tenderness ka mishran mehsoos karte hue. Woh ek saath lete rahe, unke dil dhadak rahe, apne rishtay ke liye abhari mehsoos karte hue. Lekin raat aage badhne par, Rohan par ek confusion ka bhav wash kar gaya.
+
+Kuch aur pal shanti se bitaane ke baad, usne mehsoos kiya ki ab uska hostel wapas jaana ka samay aa gaya hai. Usne baith kar, ek mixture of regret aur confusion mehsoos karte hue kaha, “Mom, mujhe jaana hai.”
+
+Savita ne usse dekha, chinta uski aankhon mein thi. “Kya tumhe pakka hai, Rohan? Yeh der ho rahi hai.”
+
+“Haan, mujhe bas… mujhe kuch samay sochne ki zarurat hai,” usne jawab diya, bhavnaon ki ek lehar mehsoos karte hue.
+
+Usne jaldi se apne cheezen ikatthi ki aur apne ghar ki garmi ko chhod diya, thandi raat ki hawa mein kadam rakha. Jab woh hostel ki taraf chal raha tha, toh usse pyaar aur confusion ki bhavnaen mehsoos hoti rahi. Usne raat ki ghatnaon ko apne dimaag mein dohraaya, unke beech ka gehra rishta aur jo choices unhone kiye, unhein samajhne ki koshish ki.
+
+Jab woh hostel pahuncha, usne apne dil mein ek bojh mehsoos kiya. Usne jaana ki unka rishta hamesha khaas rahega, lekin usne samjha bhi ki iske sath jo complexities aati hain, unhe bhi samajhna hoga. Us raat, jab woh apne bistar par leta tha, usne Savita ke saath pyaar ke baare mein socha, unke palon ki kadar ki jabki apni bhavnaon ke bojh ka samna kiya.`; // Add the full Hindi story text here
+                document.title = "Story - Hindi"; // Update title
+            }
+        }
+    </script>
+</body>
+</html>

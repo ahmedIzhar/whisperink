@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <script src="https://js.instamojo.com/v1/checkout.js"></script>
+    <script>
+        // Start client-defined Callback Handler Functions
+        function onOpenHandler () {
+            alert('Payments Modal is Opened');
+        }
+
+        function onCloseHandler () {
+            alert('Payments Modal is Closed');
+        }
+
+        function onPaymentSuccessHandler (response) {
+            alert('Payment Success');
+            console.log('Payment Success Response', response);
+            // Redirect to the selected story page after payment success
+            const selectedStory = localStorage.getItem('selectedStory');
+            window.location.href = selectedStory + '.html'; // Ensure the story page names match
+        }
+
+        function onPaymentFailureHandler (response) {
+            alert('Payment Failure');
+            console.log('Payment Failure Response', response);
+        }
+
+        // Configuring Handlers
+        Instamojo.configure({
+            handlers: {
+                onOpen: onOpenHandler,
+                onClose: onCloseHandler,
+                onSuccess: onPaymentSuccessHandler,
+                onFailure: onPaymentFailureHandler
+            }
+        });
+
+        // Function to initiate payment
+        function initiatePayment() {
+            const paymentDetails = {
+                amount: 10, // Amount in rupees
+                currency: 'INR', // Currency code
+                redirect_url: 'http://www.whisperink.com/thankyou', // Redirect URL after payment
+                webhook: 'http://www.whisperink.com/webhook', // Optional: Your webhook URL for payment updates
+            };
+
+            Instamojo.open('http://www.instamojo.com/@sampad', paymentDetails);
+        }
+
+        // Call the initiate payment function when the page loads
+        window.onload = initiatePayment;
+    </script>
+</head>
+<body>
+    <h1>Processing Payment...</h1>
+</body>
+</html>

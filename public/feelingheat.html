@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feeling The Heat</title>
+    <link rel="stylesheet" href="secret-styles.css"> <!-- External CSS file -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Black background */
+        }
+
+        .story-container {
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+            padding-top: 100px; /* Adjust top padding */
+            background-color: black; /* Ensure background is black */
+        }
+
+        .story-content {
+            background-color: black;
+            color: white; /* Text color */
+            border: 2px solid gold; /* Golden border */
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px; /* Padding inside the container */
+            text-align: center; /* Center the text */
+            width: 80%; /* Width of the container */
+            max-width: 600px; /* Max width */
+            transition: transform 0.3s; /* Smooth transition for positioning */
+        }
+
+        .language-selection {
+            margin: 20px 0; /* Space above and below the language options */
+            font-size: 20px; /* Increase font size for options */
+            color: white; /* Set text color to white */
+        }
+
+        .language-option {
+            cursor: pointer; /* Pointer cursor for clickable text */
+            transition: color 0.3s; /* Smooth transition for hover effect */
+            text-decoration: none;
+            padding: 7px 20px;
+            border-radius: 8px;
+            border: none;
+            background-color: bisque;
+        }
+
+        .language-option:hover {
+            color: blue; /* Change color on hover */
+        }
+
+        .story-text {
+            margin-top: 20px; /* Space above the story text */
+            font-size: 24px; /* Increase text size */
+            font-family: 'Arial', sans-serif; /* Change the font family */
+        }
+
+        /* Additional spacing for English and Hindi sections */
+        .english-story, .hindi-story {
+            margin-bottom: 40px; /* Space between the two stories */
+        }
+
+        /* Class to move the container upwards smoothly */
+        .upward {
+            transform: translateY(-50px); /* Move the container upwards */
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="story-container">
+        <div class="story-content">
+            <h1>Feeling The Heat</h1>
+            <div class="language-selection">
+                <button class="language-option" onclick="selectLanguage('english')">English</button>
+            </div>
+            <div class="story-text">
+                <p id="story-content">This is the English version of the secret story.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set default language on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            selectLanguage('english');
+        });
+
+        function selectLanguage(language) {
+            const storyContent = document.getElementById("story-content");
+            const title = document.title;
+
+            if (language === 'english') {
+                storyContent.innerHTML = `Me and wife had a relationship for 8 years. Then, with both family’s acceptance (except my father-in-law’s), we got married 1 year before. My father-in-law didn’t agree because of caste issues but my mother-in-law was okay with it. Since my wife (and her family) and my family are from the same village, we knew each other from our school times.
+
+After our first year of marriage, everything was normal. My father-in-law also started to speak with me. They would visit us once in a month as we were living nearby our hometown. In November 2022, my wife got pregnant. My parents and her parents were happy about it and visited us one by one.
+
+My father-in-law and mother-in-law came on Sunday morning and planned to leave in the evening. My wife insisted my mother-in-law to stay with us for some days, so she also agreed instantly and conveyed it to my father-in-law; he also agreed. So, my father-in-law decided to go home.
+
+On the first day, my mother-in-law was a bit hesitant to walk around in the house as I was there. It was the first time she stayed with us. As I work in the IT sector, I am able to complete my work from home. So, once my wife went to work, me and my mother-in-law were the only ones at home. She literally didn’t speak to much on the first day.
+
+To ease her, I asked my wife to plan to go out to my father-in-law’s and have dinner there. We said the same thing to my mother-in-law, and she was happy about it. We three went to my father-in-law’s, had dinner and then came back home around 11:30 pm. That day, I came to know that she was very innocent, and my wife mocked my mother-in-law at every statement she spoke. But I scolded my wife for that and comforted my mother-in-law.
+
+On the second day, she was much more comfortable in speaking with me. I logged in and started working while my mother-in-law watched serials on the TV. Later in the day, we had lunch together. She was sitting opposite to me and started to serve food to me. But I asked her to get a plate for her too and insisted her to eat. However, she refused saying, “You will eat first. After that, I will eat.” In Tamil Nadu villages mothers-in-law will not even sit before sons-in-law.
+
+But I took a plate and served food for her too and asked her to eat. After much struggle, she agreed to eat. While having food she started the conversation:
+
+She: It is good to see you giving importance to everyone and also to me.
+
+Me: Why it is like that? You are my mother-in-law. So, giving respect to you is my duty.
+
+She: You are the only one giving that. No one in my house respects me or gives importance to me.
+
+Me: (felt so sad for her; I thought about comforting her) Don’t think like that. If you are not at home one day, they will struggle, and they will know your importance.
+
+She: But I want to feel that importance given to me which has been a 25-year dream for me and it will remain as a dream, I guess.
+
+Me: No, it won’t. I am here… and I will definitely give importance to you… don’t worry…
+
+She: Is that so? Let’s see…
+
+Until this point, I didn’t have any bad intention towards her. But the next day, my wife went to work, and my mother-in-law was sitting in the portico while applying oil to her hair to take head bath. It seemed as though some oil spilled on the floor without her noticing. On her way back into the house, she placed her foot on it and fell down.
+
+I was inside working on my laptop and heard a sound and came out instantly. I saw that she was unconscious, and her saree had gone up to her thigh. I was stunned by seeing that. I ran towards her, got her up by holding her and helped her sit on the chair. I got some water to spray on her and she woke up.
+
+I began to check on her head and other parts of her body to see whether she had any injuries or not. She said, “It’s alright.” But I said, “Please stop… I will check,” and during that time, she was seeing only me. After checking, I said, “By God’s grace you don’t have any injuries. Please get up and come inside… Take some rest.”
+
+She: I can’t. My leg and hip are hurting. (I later got to know that this was part of her plan)
+
+Me: Okay… Let me lift you… (I gave her my right shoulder to get her up and get her to her bed)
+
+She: Please take that Iodex and give it to me. I will apply it. Only then the pain will reduce.
+
+He: (I did as she asked but I knew that she couldn’t apply it on her hips. So, I asked, “If you don’t mind, can I help you?” I thought she would say ‘no’ but to my surprise, she said ‘yes’.
+
+She: If it is okay for you, yes… please… (she turned around and laid on her stomach)
+
+I have taken some Iodex in hand and started to apply it on her open hip area. She asked me to move a bit lower and I did. Then, she asked me to go lower again until I reached her ass crack. My “junior” started to raise on seeing the crack. I was scared to go further, so I started to massage and left the room asking her to take rest.
+
+After some time, she went to take a bath and came to my room fully dressed. She asked me whether I was free or not. I said, “Yeah, I am free.” Then, she asked me to help her in preparing lunch if it was okay for me. I said, “Okay.” I went to the kitchen. The scent of her soap was intoxicating me.
+
+While cutting vegetables, I continuously watched her from a side view. She was truly gorgeous; she didn’t even look 48. She had a 40C cups and a fitting ass; she was wonderfully carved naattu kattai. My junior was getting up slowly in my track pants and I was hiding it under the shelf. The sweat drops and the water drops, due to her bathing, were slowly getting down into her blouse area.
+
+It was an awesome thing to watch. She was glowing in the water drops. She had a very fair skin. Suddenly, she turned towards me and caught me ogling her. I turned immediately. She said, “You are such a caring guy. My daughter selected you correctly and thanks for taking care of me.”
+
+I said, “It’s okay. It’s my duty to take care of you all.” While saying that, I got a cut on my finger and blood started to come out. She became horrified and immediately put my finger in her mouth to stop the blood. Our eyes met and we went into a trance. At that point, my junior was in full length.
+
+Suddenly, the cooker whistle blew, and we came out of the trance. She asked me to rinse it in water and went to get the first aid kit. While putting plaster on it, she said, “Please use the bathroom. I think you need to.” My mother-in-law smiled naughtily and turned around towards the stove. Then, I saw my junior; it made a tent in my track pants. I was embarrassed and went to my room.
+
+She finished cooking and asked me to come out and have lunch. I went hesitantly. She served food but didn’t have any herself. I asked her to have but she said, “No.” While eating, I was unable to put food in my mouth due to the plaster on my finger. She saw that and asked me, “Can I feed you? Will that be okay?”
+
+While I was thinking about how to respond, she came near me and took my plate and started to feed me with her hands. Initially, I was hesitantly eating but she was doing it with love. I saw it in her eyes. She was continuously staring in my eyes and feeding me. I also started to taste her hands by licking it and on the last bite, I bit her fingers, and she moaned, instead of shouting.
+
+I was shocked about that. But she immediately went to the kitchen sink to wash the plate. At that point, I was thinking to move further along with my naughty thoughts. I started to think. Then, I also went to the kitchen and saw her standing in front of the sink but not washing anything. So, I moved forward and went behind her till my junior touched her ass.
+
+She was nervous and shivering; I was too. But with all the courage in the world, I placed my hand on her hip inside her saree. She was shivering even more. I placed a kiss on her neck. That was it! She turned towards me and hugged me tightly without any words or seeing me. Then, I held her tightly in my arms for 5 minutes. Suddenly, someone pressed the calling bell. We instantly separated from each other, and I went to my room. She addressed the door; it was a courier boy.
+
+*****
+
+The next day, once my wife went to work, my mother-in-law went to take a bath. She came back dressed and entered my room. She simply went and sat on the bed nearby the computer table where I was sitting. I didn’t turn towards her. Instead, she started the conversation:
+
+She: Why are you not speaking to me from yesterday?
+
+Me: It’s nothing like that. I am speaking… there’s no problem.
+
+She: I know you are not comfortable with me after that incident.
+
+Me: No, it’s not like that. Please, I don’t want to speak about it… And sorry…
+
+She: So, it is clear… Like everyone in the family, you also don’t like me. Okay, it’s fine. I loved your care and attention shown towards me. But I am getting nothing but ignorance now.
+
+Saying that, she started to get up and leave. I held her hand and said, “You are completely wrong. I too love to be in your presence, but I thought I made you uncomfortable.”
+
+She immediately came and sat on my lap and hugged me. I was dumbstruck but my junior was getting ready. I lifted her in my hands and got up, placed her in bed I went near her. She closed her face with her hand. I went closer and kissed her on her neck. She held me by hugging me. I removed her hand and also removed her saree’s pallu. There were two globes in front of me. She closed her eyes, but her hands went to my junior and held it tightly.
+
+I was in heaven and that made me into an animal. I started to remove her blouse and kissed her bosom. I was pressing her melons vigorously and started kneading her nipples with me teeth. She gave out a moan that pushed me even more. Then, I directly went down and removed her petticoat. But she didn’t have any underwear on.
+
+Without wasting time, I placed my tongue on her bush. She became horrified and tried to pull me up by my hair, but it was not possible. She said, “Why you are going there? It’s not clean.” (Typical village lady… she doesn’t know about the cunt licking) I started my magic and soon, she gave up and started to moan loudly. Within 2 minutes, she came.
+
+Her fluids started to flow on my tongue. The aroma it generated was the best one I experienced. I started to insert my fingers inside her cunt. Her cunt muscle was a bit loose, but her cunt was tight. She said, “Please put it in slowly. It hasn’t been used for many years.”
+
+I did it slowly, but she didn’t have patience. She pulled me up and kissed me on my lips. She said, “Please enter inside… I can’t wait!” Then, obeying her, I started to enter her pussy. It was too tight for me. So, I applied some of her vaginal juice on my penis and started to push. She was in pain, but I was entering slowly. Half of my penis went inside, and she said, “It’s enough… It is going to tear it…”
+
+But I didn’t stop entering her further. She couldn’t bear the pain, so she put a pillow on her face in order to avoid shouting. Finally, with a strong push, I entered all 6 inches fully. She gave out a weird moan but held me tightly. She asked me to rest for some time to let it get settled. After 2 minutes she told me to continue.
+
+I started to move back and forth. She was slowly getting into the rhythm and starting to enjoy it. She said, “Your penis is much bigger than my husband’s. How is my daughter taking this in?”
+
+I laughed on her remarks and started to do it faster. Not long after, she said, “I love to be on top.” I obeyed and asked her to get on top of me. She was certainly a pro rider. After riding me for a bit, I insisted for her to go into the doggystyle position (my favorite position). We both loved it. Within 20 minutes of ramming, I released a huge load in her and she came 4 times in between.
+
+She was completely exhausted. We both ended up falling asleep in each other’s arms. At 4 pm, she woke me up to get ready as my wife would be coming at any time. My mother-in-law took a bath and got herself in a normal attire. Then, after taking a bath, I started working on my laptop. We are speaking via eye contact the rest of the evening.
+
+My wife delivered a healthy baby, and my mother-in-law stayed with us to take care of my wife (and me) during her pregnancy. We enjoyed complete sex for the entire 9 months. I never missed my wife during her pregnancy and my mother-in-law also very happy. We both got very intimate.
+
+`; // Add the full English story text here
+                document.title = "Story - English"; // Update title
+            }  }
+    </script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tangled Hearts</title>
+    <link rel="stylesheet" href="secret-styles.css"> <!-- External CSS file -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Black background */
+        }
+
+        .story-container {
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+            padding-top: 100px; /* Adjust top padding */
+            background-color: black; /* Ensure background is black */
+        }
+
+        .story-content {
+            background-color: black;
+            color: white; /* Text color */
+            border: 2px solid gold; /* Golden border */
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px; /* Padding inside the container */
+            text-align: center; /* Center the text */
+            width: 80%; /* Width of the container */
+            max-width: 600px; /* Max width */
+            transition: transform 0.3s; /* Smooth transition for positioning */
+        }
+
+        .language-selection {
+            margin: 20px 0; /* Space above and below the language options */
+            font-size: 20px; /* Increase font size for options */
+            color: white; /* Set text color to white */
+        }
+
+        .language-option {
+            cursor: pointer; /* Pointer cursor for clickable text */
+            transition: color 0.3s; /* Smooth transition for hover effect */
+            text-decoration: none;
+            padding: 7px 20px;
+            border-radius: 8px;
+            border: none;
+            background-color: bisque;
+        }
+
+        .language-option:hover {
+            color: blue; /* Change color on hover */
+        }
+
+        .story-text {
+            margin-top: 20px; /* Space above the story text */
+            font-size: 24px; /* Increase text size */
+            font-family: 'Arial', sans-serif; /* Change the font family */
+        }
+
+        /* Additional spacing for English and Hindi sections */
+        .english-story, .hindi-story {
+            margin-bottom: 40px; /* Space between the two stories */
+        }
+
+        /* Class to move the container upwards smoothly */
+        .upward {
+            transform: translateY(-50px); /* Move the container upwards */
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="story-container">
+        <div class="story-content">
+            <h1>Tangled Hearts</h1>
+            <div class="language-selection">
+                <button class="language-option" onclick="selectLanguage('english')">English</button> | 
+                <button class="language-option" onclick="selectLanguage('hindi')">Hindi</button>
+            </div>
+            <div class="story-text">
+                <p id="story-content">This is the English version of the secret story.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set default language on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            selectLanguage('english');
+        });
+
+        function selectLanguage(language) {
+            const storyContent = document.getElementById("story-content");
+            const title = document.title;
+
+            if (language === 'english') {
+                storyContent.innerHTML = `In a bustling town in India, amidst the vibrant streets and colorful festivals, lived a boy named Aryan. He was in the 10th grade at a local school known for its rigorous academics and dedicated teachers. Aryan was an average student, but he had a passion for English. His heart raced every time he entered the classroom of Miss Aditi, the English teacher who had recently come from England.
+
+Miss Aditi was not just beautiful; she had a warm smile that could light up the entire room. Her long, wavy hair framed her face, and her expressive eyes shone with kindness. She made literature come alive with her captivating stories and discussions about the characters and themes. The students loved her, but for Aryan, it was something more profound.
+
+As the school year progressed, Aryan found himself daydreaming about Miss Aditi. He admired her from afar, watching how she interacted with the students and made learning enjoyable. He often imagined what it would be like to have a life with her, filled with laughter and shared passions. However, Aryan was aware that this admiration was forbidden. He reminded himself that she was his teacher and that there was a line they could not cross.
+
+One day, as the sun set and painted the sky in hues of orange and pink, Miss Aditi asked Aryan to stay after class. The other students filed out, leaving the two of them alone. Aryan felt butterflies in his stomach, unsure of what to expect.
+
+“Aryan,” Miss Aditi said, her tone serious yet gentle, “I wanted to talk to you about your essay. It’s exceptional, but I believe you can do even better.”
+
+Aryan nodded, trying to focus on her words but finding it hard to ignore the tension in the air. As they discussed his writing, their hands accidentally brushed against each other. The moment felt electric, and they both froze.
+
+“Sorry,” Aryan muttered, pulling his hand back, but Miss Aditi didn’t move away. Instead, she looked into his eyes, her gaze lingering longer than usual.
+
+“Aryan,” she whispered, her voice trembling slightly, “there’s something about you...”
+
+Before she could finish, the door swung open, and a fellow teacher walked in, breaking the moment. Miss Aditi quickly composed herself, and Aryan left the classroom, his heart racing with confusion and longing.
+
+In the following weeks, Aryan found it increasingly difficult to hide his feelings. Miss Aditi would often catch his eye during class, and they exchanged knowing smiles. The tension between them grew, and the classroom became a space charged with unspoken words.
+
+One rainy afternoon, the school organized a poetry reading competition. Miss Aditi encouraged her students to express their feelings through poetry. Aryan, inspired by his emotions for her, wrote a heartfelt poem titled “Tangled Hearts.” He poured his soul into the words, describing love, longing, and the complexities of their relationship.
+
+When he read the poem aloud in class, Miss Aditi’s eyes filled with tears. The other students applauded, but she remained silent for a moment, lost in thought. After class, she called him aside, visibly shaken.
+
+“Aryan, that was beautiful,” she said, her voice soft. “But you need to be careful with your feelings. It’s important to focus on your studies.”
+
+“I can’t help how I feel, Miss Aditi,” he replied, his heart pounding. “You make me want to be better. You inspire me.”
+
+She looked away, fighting back tears. “It’s not right. I’m your teacher.”
+
+But the words hung in the air like a heavy fog. That evening, as the rain poured outside, Aryan stayed late in the library, lost in his thoughts. He couldn’t shake off the connection he felt with Miss Aditi. He had to see her again, to share what was in his heart.
+
+The next day, he mustered the courage to ask her to meet him after school. When the final bell rang, he waited nervously outside her classroom. Miss Aditi stepped out, and seeing the apprehension in his eyes, she agreed to meet him in the empty courtyard.
+
+“Aryan, we shouldn’t be doing this,” she said, glancing around to make sure no one was watching.
+
+“I just want to talk,” he replied, stepping closer. “Please.”
+
+In the quiet of the courtyard, surrounded by blooming flowers and the chirping of birds, Aryan poured out his feelings. He told her how much she meant to him, how he admired her not just as a teacher but as a person. Miss Aditi listened, her heart racing as she battled her own emotions.
+
+“Aryan, this isn’t just about us. You’re my student. I could lose my job, my reputation…”
+
+“Doesn’t that mean anything to you?” Aryan asked, desperation in his voice. “I don’t want to lose you. You’ve changed my life.”
+
+The weight of his words hung heavy in the air. Miss Aditi looked into his eyes, and for a moment, the world around them faded. She took a deep breath, stepping closer to him. “I don’t know how to feel about this,” she whispered, her voice breaking.
+
+In that moment, they shared their first kiss, soft and tentative. It was filled with the emotions they had kept bottled up for so long. The kiss deepened, and they lost themselves in the moment, forgetting everything else. It felt right yet wrong, thrilling yet terrifying.
+
+Over the next few weeks, their meetings grew more intimate. In the quiet corners of the school, they would steal kisses, their hearts racing with each touch. One evening, as the sun dipped below the horizon, casting a warm glow over the courtyard, Aryan and Miss Aditi found themselves alone again.
+
+“I can’t resist you anymore,” Aryan whispered, pulling her close. Their lips met again, but this time the kiss was more passionate, filled with longing. Miss Aditi’s heart raced as she wrapped her arms around him, deepening the kiss.
+
+As their kisses became more intense, they moved to the nearby art room, where the dim light created an intimate atmosphere. They closed the door behind them, and Aryan pressed Miss Aditi against the wall, his hands finding her waist. She gasped, and he could feel her warmth radiating against him.
+
+“Aryan,” she breathed, her voice a mixture of desire and fear. “We shouldn’t be doing this.”
+
+“I can’t help it,” he replied, his voice low and filled with yearning. “I need you, Miss Aditi.”
+
+With that, their lips met again, more urgently this time. Aryan’s hands explored her back as he pressed his body against hers. She responded eagerly, feeling her resolve melting away as passion took over.
+
+As they kissed, Aryan slowly lifted her shirt, his fingers brushing against her bare skin. Miss Aditi shivered at his touch, feeling a rush of excitement and fear. “We can’t… what if someone sees us?” she whispered, but her body betrayed her as she leaned closer to him.
+
+“Aryan, please…” she murmured, but her words were lost as he pressed his lips against hers once more, deepening their connection. They lost track of time, consumed by their desires, as they explored each other's bodies in a haze of passion.
+
+In that stolen moment, they forgot about the world outside. The boundaries between student and teacher blurred, and nothing else mattered. They shared their bodies, their souls, tangled in an embrace that felt both forbidden and exhilarating.
+
+As the days went by, they continued to meet in secret, their passion for each other growing stronger. Each encounter was filled with tender moments and fiery kisses, but the reality of their situation loomed over them like a dark cloud.
+
+On the final day of school, the atmosphere was bittersweet. Students were celebrating their achievements, taking pictures, and saying their goodbyes. Aryan felt a heaviness in his heart as he approached Miss Aditi’s classroom for one last time.
+
+When he entered, she was sitting at her desk, her expression a mixture of sadness and resignation. “Aryan, I’m going to miss you,” she said softly, her voice filled with emotion.
+
+“I’ll miss you too, Miss Aditi. You’ve made such a difference in my life,” he replied, his voice cracking.
+
+They shared one last passionate kiss, filled with everything they hadn’t said. As they pulled away, Aryan looked into her eyes, trying to memorize every detail.
+
+“I’ll never forget you,” he whispered.
+
+“Promise me you’ll focus on your studies and follow your dreams,” she replied, tears streaming down her cheeks.
+
+“I promise,” he said, knowing that part of his heart would always belong to her.
+
+As Aryan walked out of the classroom for the last time, he glanced back, hoping to capture the moment in his memory. He took a deep breath, feeling the weight of their tangled hearts, knowing they would never meet again.
+
+Graduation day arrived, and as Aryan stood on stage, receiving his certificate, he felt a mix of pride and sorrow. He was moving forward into a new chapter of his life, but Miss Aditi would always be a part of his past.
+
+With the crowd cheering around him, he glanced back into the audience, searching for her familiar face. But she was not there. In that moment, he understood that their love, while deep and real, was a fleeting chapter in the story of his life.
+
+As he walked away, Aryan carried the memories of their love in his heart—a beautiful, tangled mess of emotions that would forever shape who he became. He stepped into his future, ready to embrace whatever came next, holding onto the bittersweet memories of his time with `; // Add the full English story text here
+                document.title = "Story - English"; // Update title
+            } else {
+                storyContent.innerHTML = `Ek bhaari sheher mein, Bharat ke rangin sadkon aur utsavon ke beech, ek ladka tha jiska naam Aryan tha. Woh 10th grade mein tha ek local school mein jo apne kathin academics aur samarpit teachers ke liye jaana jaata tha. Aryan ek average student tha, lekin uska English ke liye junoon tha. Uska dil har baar dhadak uthta jab woh Miss Aditi ke classroom mein jaata, jo hal hi mein England se aayi thi.
+
+Miss Aditi sirf khoobsurat nahi thi; uski muskurahat puri kaksha ko roshan kar deti thi. Uske lambe, lehrate baalon ne uske chehre ko ghira rakha tha, aur uski vyaktitva se bhari aankhein dayalu thi. Woh literature ko jeevant bana deti thi apne manmohak kahaniyon aur patraon aur vishayon par charcha karke. Vidyarthi usse bahut pasand karte the, lekin Aryan ke liye, yeh kuch aur hi tha.
+
+Jaise jaise school saal aage badha, Aryan apne jazbaton mein kho gaya. Usne Miss Aditi ki taraf dekhna shuru kiya, jab woh students ke saath interact karti aur seekhne ko mazedaar bana deti. Woh aksar sochta ki unke saath ek aisi zindagi kaise hoti, jo hasne aur saanjhi ruchi se bhari hoti. Lekin Aryan ko pata tha ki yeh mohabbat mana hai. Usne apne aapko yaad dilaya ki woh uski teacher hai aur ek line hai jise unhe kabhi cross nahi karna chahiye.
+
+Ek din, jab sooraj ghurta hua tha aur aasman ne orange aur pink rang bhar diye the, Miss Aditi ne Aryan ko class ke baad rukne ko kaha. Baaki sab students bahar nikal gaye, sirf woh dono akeli rahe gaye. Aryan ke pet mein kide se hilne lage, samajh nahi aa raha tha ki kya hone wala hai.
+
+“Aryan,” Miss Aditi ne kaha, uska swad kuch serious lekin dayalu tha, “Main tumse tumhari essay ke baare mein baat karna chahti thi. Yeh bahut accha hai, lekin mujhe lagta hai ki tum isse aur bhi behtar kar sakte ho.”
+
+Aryan ne sirf haath hilaaya, koshish karte hue uske shabdon par dhyan dene ki, lekin us hawa mein garmi ko ignore karna mushkil tha. Jab unki haath ek dusre se takraaye, toh woh pal bijli se bhara hua mehsoos hua, aur dono freeze ho gaye.
+
+“Sorry,” Aryan ne kuchala, apna haath kheenchte hue, lekin Miss Aditi ne aisa nahi kiya. Uski aankhein Aryan ki aankhon mein dekhti rahi, uska dekhna zyada samay tak ruk gaya.
+
+“Aryan,” usne dheere se kaha, uska swad thoda kaanp raha tha, “Tumhare baare mein kuch hai…”
+
+Usse poori tarah kehne se pehle, darwaza achanak khulta hai, aur ek fellow teacher andar aata hai, is pal ko todte hue. Miss Aditi ne jaldi se khud ko sambhala, aur Aryan ne confusion aur longing ke sath classroom chhod diya.
+
+Agli kuch hafton mein, Aryan ke liye apne jazbaton ko chhupana aur mushkil hota gaya. Miss Aditi aksar class mein uski aankhon se milti thi, aur woh dono ek dusre ko samajhdaar muskurahat dete the. Unke beech ka tanav badhta gaya, aur classroom ek aisi jagah ban gaya jahan badi baatein chhupi hui thi.
+
+Ek baarish bhari dopahar, school ne ek kavita padhne ki pratispardha ka aayojan kiya. Miss Aditi ne apne students ko apne jazbaton ko kavita ke zariye vyakt karne ke liye prerna di. Aryan, apne jazbaton se prerit hokar, ek dilchasp kavita likhi, jiska naam “Tangled Hearts” rakha. Usne apne shabdon mein pyaar, abhilasha aur unki rishte ki jatiltaon ko bayan kiya.
+
+Jab usne kavita padhkar sunaayi, Miss Aditi ki aankhein aansuon se bhar gayi. Baaki students ne taaliyan bajayi, lekin woh kuch samay tak chup rahi, gherai mein khoi rahi. Class ke baad, usne usse alag bulaya, bhavnaon se bhari hui.
+
+“Aryan, yeh bahut sundar tha,” usne kaha, uska swad naram. “Lekin tumhe apne jazbaton se savdhaan rehna chahiye. Tumhe apne studies par dhyan dena zaroori hai.”
+
+“Main apne jazbaton ko nahi rokh sakta, Miss Aditi,” usne jawab diya, uska dil tezi se dhadak raha tha. “Tum mujhe behtar banne ki prerna deti ho. Tum mujhe prerit karti ho.”
+
+Woh dekhti rahi, aankhen bhar aaye. “Yeh sahi nahi hai. Main tumhari teacher hoon.”
+
+Lekin yeh shabd hawa mein ek bhari bhoolbhulaiya ki tarah latakte rahe. Us raat, jab baarish bahar baras rahi thi, Aryan library mein der tak ruka, apne vicharon mein kho gaya. Usne Miss Aditi ke saath mehsoos ki gayi connection ko nahi bhula sakta. Usse usse ek baar aur dekhna tha, apne dil ki baat kehni thi.
+
+Agli din, usne usse school ke baad milne ka sahas ikattha kiya. Jab final bell baji, woh uske classroom ke bahar nerve se ruk gaya. Miss Aditi bahar aayi, aur jab usne uski aankhon mein chinta dekhi, usne courtyard mein usse milne ke liye haan ki.
+
+“Aryan, humein yeh nahi karna chahiye,” usne kaha, dekhte hue ki koi nahi dekh raha hai.
+
+“Main sirf baat karna chahta hoon,” usne aage badhkar kaha. “Kripya.”
+
+Courtyard ki khamoshi mein, phoolon aur parindon ki chirping se ghira, Aryan ne apne jazbat bayan kiye. Usne kaha ki woh uske liye kya matlab rakhti hai, kaise usne sirf ek teacher nahi, balki ek vyakti ke roop mein uski prashansa ki. Miss Aditi ne suna, uska dil tez dhadak raha tha jab woh apne jazbaton se lad rahi thi.
+
+“Aryan, yeh sirf humare baare mein nahi hai. Tum mere student ho. Main apni naukri, apne reputation ko kho sakti hoon…”
+
+“Yeh tumhare liye kuch nahi hai?” Aryan ne kaha, uski aawaz mein udaasi thi. “Main tumhe kho dena nahi chahta. Tumne meri zindagi badal di hai.”
+
+Uske shabdon ka bojh hawa mein bhari bhoolbhulaiya ki tarah tha. Miss Aditi ne uski aankhon mein dekha, aur ek pal ke liye, unke ird-gird ka jagat dhundhla ho gaya. Usne gehri saans li, uske kareeb aakar. “Main nahi jaanti ki iske baare mein kya mehsoos karoon,” usne kaha, uski aawaz bhi thodi tooti.
+
+Us pal mein, unhone apna pehla kiss share kiya, naram aur sambhavna se bhara. Yeh kiss un jazbaton se bhara tha jo unhone itne samay se band kiye hue the. Kiss gehra hota gaya, aur woh pal mein kho gaye, sab kuch bhoolte hue. Yeh sahi tha lekin galat, thrilling lekin daravana.
+
+Agle kuch hafton mein, unke mulaqaten aur bhi gehri hoti gayi. School ke khamosh kone mein, woh chori chori kiss karte, har sparsh se unka dil tez dhadakta. Ek shaam, jab sooraj asmaan ke neeche jhuka, courtyard ko garam roshni mein bharta, Aryan aur Miss Aditi fir se akeli paaye gaye.
+
+“Main tumhe aur nahi rokh sakta,” Aryan ne kaha, use apne kareeb khinchta. Unki lips phir se mil gayi, lekin is baar kiss zyada junoon se bhara tha, bhavnaon se bhara. Miss Aditi ka dil tez dhadak raha tha jab usne apne haath uske etr laga diya, kiss ko gehra karte hue.
+
+Jaise jaise unki kisses aur zyada intense hoti gayi, woh paas wale art room mein chale gaye, jahan sirf unki hi duniya thi. Us room ki deewaron par kai kalakaaron ke kaam the, lekin unka dhyan sirf ek dusre par tha. Aryan ne churaake pal ko sambhal kar rakha, Miss Aditi ki aankhon mein dekhte hue. Woh pal hamesha yaad rakhne wala tha—ek chori hui kahani jo kabhi khatam nahi hogi.
+
+Kuch mahine baad, graduation day aaya. Jab Aryan stage par khada tha, apna certificate prapt karte hue, usne garv aur udaasi ka mix mehsoos kiya. Woh naye chapter ki taraf badh raha tha, lekin Miss Aditi hamesha uski yaadon ka ek hissa rahi.
+
+Jab crowd uske aas-paas taaliyan baja raha tha, usne audience mein dekha, parichit chehre ki talash mein. Lekin woh wahan nahi thi. Us pal mein, usne samjha ki unka pyaar, jo gehra aur saccha tha, zindagi ki kahani ka ek fleeting chapter tha.
+
+Jaise hi woh wahan se chala gaya, Aryan ne apne dil mein unke pyaar ki yaadon ko sambhala—a beautiful, tangled mess of emotions jo hamesha usse shape karega. Usne apne bhavishya mein kadam rakha, taiyaar hote hue jo bhi aage aane wala tha, apne aur Miss Aditi ke beech ke us bittersweet pyaar ki yaadon ko saath lete hue.`; // Add the full Hindi story text here
+                document.title = "Story - Hindi"; // Update title
+            }
+        }
+    </script>
+</body>
+</html>

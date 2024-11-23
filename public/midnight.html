@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Seduction</title>
+    <link rel="stylesheet" href="secret-styles.css"> <!-- External CSS file -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Black background */
+        }
+
+        .story-container {
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+            padding-top: 100px; /* Adjust top padding */
+            background-color: black; /* Ensure background is black */
+        }
+
+        .story-content {
+            background-color: black;
+            color: white; /* Text color */
+            border: 2px solid gold; /* Golden border */
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px; /* Padding inside the container */
+            text-align: center; /* Center the text */
+            width: 80%; /* Width of the container */
+            max-width: 600px; /* Max width */
+            transition: transform 0.3s; /* Smooth transition for positioning */
+        }
+
+        .language-selection {
+            margin: 20px 0; /* Space above and below the language options */
+            font-size: 20px; /* Increase font size for options */
+            color: white; /* Set text color to white */
+        }
+        
+        .language-option {
+            cursor: pointer; /* Pointer cursor for clickable text */
+            transition: color 0.3s; /* Smooth transition for hover effect */
+            text-decoration: none;
+            padding: 7px 20px;
+            border-radius: 8px;
+            border: none;
+            background-color: bisque;
+        }
+
+        .language-option:hover {
+            color: blue; /* Change color on hover */
+        }
+
+        .story-text {
+            margin-top: 20px; /* Space above the story text */
+            font-size: 24px; /* Increase text size */
+            font-family: 'Arial', sans-serif; /* Change the font family */
+        }
+
+        /* Additional spacing for English and Hindi sections */
+        .english-story, .hindi-story {
+            margin-bottom: 40px; /* Space between the two stories */
+        }
+
+        /* Class to move the container upwards smoothly */
+        .upward {
+            transform: translateY(-50px); /* Move the container upwards */
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="story-container">
+        <div class="story-content">
+            <h1>Midnight Seduction</h1>
+            <div class="language-selection">
+                <button class="language-option" onclick="selectLanguage('english')">English</button> | 
+                <button class="language-option" onclick="selectLanguage('hindi')">Hindi</button>
+            </div>
+            <div class="story-text">
+                <p id="story-content">This is the English version of the secret story.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set default language on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            selectLanguage('english');
+        });
+
+        function selectLanguage(language) {
+            const storyContent = document.getElementById("story-content");
+            const title = document.title;
+
+            if (language === 'english') {
+                storyContent.innerHTML = `In a small town in India, life moved at a gentle pace. Rohan, a young man in his mid-twenties, had just returned home after completing his studies. He settled back into the familiar rhythms of his childhood neighborhood, but something felt different. The evenings were warmer, and the air was thick with unspoken possibilities.
+
+His neighbor, Meera, was a woman of striking beauty and grace. In her late thirties, she exuded a calm confidence that intrigued Rohan. He had known her since he was a child, but now, as he looked at her from his balcony, he felt a stirring in his heart. She often tended to her garden, her long hair flowing like a dark river down her back, her laughter echoing softly through the evening air.
+
+One evening, Rohan decided to break the silence. He spotted Meera watering her plants and summoned the courage to call out, “Hi, Meera! How are you?”
+
+She turned, her face lighting up with a warm smile. “Rohan! It’s good to see you. How was your time away?”
+
+As they chatted, Rohan found himself captivated by her stories. Meera spoke of her travels, her dreams, and the little joys she found in everyday life. Their conversation flowed effortlessly, and soon, what began as small talk turned into deeper discussions about their hopes and fears.
+
+Days turned into weeks, and their evening talks became a cherished ritual. Rohan would often find himself leaning over the balcony railing, listening intently as Meera shared her thoughts. They exchanged glances filled with understanding and something more—an unspoken attraction that simmered beneath the surface.
+
+One particularly warm evening, the stars twinkled brightly in the sky. The air was thick with anticipation as Rohan joined Meera on her balcony, the tension between them palpable. They laughed and reminisced about their childhood, but Rohan could feel a shift in the atmosphere.
+
+Meera leaned closer, her voice barely above a whisper. “You know, Rohan, there’s something magical about midnight. It feels like the world holds its breath.”
+
+He nodded, his heart racing. “I feel it too. It’s as if anything can happen.”
+
+Their eyes locked, and in that moment, everything changed. Rohan felt drawn to her in a way he had never experienced before. He reached out and gently took her hand, their fingers intertwining. Meera’s breath hitched, and she didn’t pull away. Instead, she smiled, her eyes sparkling with a mix of mischief and longing.
+
+“Do you want to see something?” she asked, her voice teasing. Without waiting for an answer, she led him to the edge of the balcony where they had a clear view of the night sky. The stars shimmered like diamonds, and the moon cast a silvery glow over everything.
+
+“This is my favorite spot,” Meera said, her gaze fixed on the sky. “It’s where I come to think and dream.”
+
+Rohan stood close beside her, their shoulders brushing against each other. The closeness ignited a fire within him, and he couldn’t resist the urge to lean in slightly, inhaling her sweet floral scent. Meera turned her head slightly, their faces inches apart.
+
+“Rohan,” she whispered, her voice trembling ever so slightly, “sometimes I wonder if we’re meant for something more than just friendship.”
+
+His heart raced at her words. “I’ve felt that too, Meera. There’s something about you that I can’t ignore.”
+
+In that moment, Rohan leaned in, and their lips met in a soft, tentative kiss. It was gentle at first, filled with the sweetness of discovery. But as the kiss deepened, it became more passionate, more urgent, as if they were trying to convey all the feelings they had kept hidden for so long.
+
+They pulled away, breathless, and Rohan looked into Meera’s eyes, searching for any hint of regret. But all he saw was desire mirrored back at him.
+
+“Let’s not rush this,” Meera said softly, her fingers brushing against his cheek. “Let’s enjoy every moment.”
+
+Rohan nodded, feeling a sense of relief wash over him. They spent the next few nights exploring their newfound connection, sharing more kisses under the stars, each one more electrifying than the last.
+
+Then came that fateful night—a warm breeze swept through the town, carrying the scent of jasmine. Rohan and Meera were on her balcony, their laughter echoing into the night. The chemistry between them was undeniable, and they both felt the pull of something deeper.
+
+“Do you ever feel like the night is alive?” Rohan asked, his heart pounding in his chest.
+
+Meera leaned closer, her breath warm against his skin. “Yes, it feels like it’s full of possibilities.”
+
+Encouraged by her words, Rohan cupped her face in his hands, and their lips met again, this time with a sense of urgency. The kiss ignited a fire within them, a longing that had built over weeks of shared moments and stolen glances.
+
+As they kissed, the world around them faded away. The sound of the night—crickets chirping, the rustle of leaves—was drowned out by the beating of their hearts. They moved closer, the heat between them intensifying.
+
+Rohan pulled back for a moment, looking deeply into Meera’s eyes. “Are you sure about this?” he asked, his voice barely above a whisper.
+
+Meera nodded, her expression resolute yet soft. “I want this, Rohan. I want you.”
+
+With that affirmation, they found themselves caught in a whirlwind of passion. Rohan guided Meera to the balcony's edge, where the moonlight bathed them in a silvery glow. Their kisses grew more fervent, filled with a mix of desire and tenderness.
+
+The moment felt timeless as they surrendered to their feelings, the balcony becoming their secret sanctuary. They lost themselves in each other, the world outside slipping away.
+
+As they pulled away, both breathless, Rohan whispered, “I never imagined this would happen.”
+
+“Neither did I,” Meera replied, her eyes sparkling with mischief and warmth. “But I’m glad it did.”
+
+They spent the rest of the night wrapped in each other’s arms, whispering sweet nothings and sharing dreams, their hearts finally intertwined in a way they had both longed for.
+
+The nights that followed were filled with laughter and love, their bond deepening with every shared secret. They created a world that was entirely their own—a world where time stood still, and nothing else mattered except the love that blossomed under the midnight sky.
+
+Rohan knew that this was just the beginning of a beautiful journey together, filled with midnight whispers and a deep connection that would last a lifetime.
+
+ `; // Add the full English story text here
+                document.title = "Story - English"; // Update title
+            } else {
+                storyContent.innerHTML = `Ek chhote se sheher mein, zindagi dheere se chal rahi thi. Rohan, ek yuva aadmi, apni bees saal ki umar mein, apni padhai khatam kar ke ghar wapas aaya. Usne apne bachpan ke mohalle ki pehchaan mein khud ko dhundha, lekin kuch alag sa mehsoos kiya. Shaam ko garmi mehsoos hoti thi, aur hawa mein ankahe sambhavnayein bhari thi.
+
+Uska padosi, Meera, ek khoobsurat aur shant mahila thi. Apni tees saal ki umar mein, usme ek aisi atma-vishwas thi jo Rohan ko akarshit karti thi. Usne Meera ko bachpan se jaanta tha, lekin ab, jab wo uske balcony se dekh raha tha, to uske dil mein ek nayi khushi ka ehsaas ho raha tha. Meera aksar apne bagiche ki dekhbhal karti thi; uske lambe baal uski peeth tak behte the, aur uski hasi shaam ki hawa mein gungunahat karti thi.
+
+Ek shaam, Rohan ne chup rehne ka silsila todne ka faisla kiya. Usne dekha ki Meera apne paudhon ko paani de rahi thi aur apni himmat ikattha karke bulaaya, “Hi, Meera! Tum kaisi ho?”
+
+Usne munh modha, aur uska chehra ek pyaari muskurahat se chamak utha. “Rohan! Tumhe dekh kar achha laga. Tumhara waqt kaisa gaya?”
+
+Jaise hi unki baatein hui, Rohan uski kahaniyon mein khud ko kho gaya. Meera ne apne safaron, sapno, aur rozana ki choti-choti khushiyon ke baare mein bataya. Unki baatein itni aasan thi ki jaldi hi, choti si baat-cheet gehri charcha mein badal gayi, jahan unhone apne armaan aur daron ko saanjha kiya.
+
+Din hote gaye, aur unki shaam ki baatein ek pyaari aadat ban gayi. Rohan aksar balcony ke railing par jhukt kar Meera ki baatein sunta tha. Unke beech mein samajh aur kuch aur—ek ankahe akarshan ka jazba tha jo chhupi hui thi.
+
+Ek vishesh garam shaam, taare chamak rahe the. Hawa mein umeed ka gahan bhaav tha jab Rohan Meera ke balcony par gaya, unke beech ki kheench hoti gayi. Dono ne hansi mazak kiya, lekin Rohan ko mehsoos hua ki vatavaran mein kuch badal raha hai.
+
+Meera ne kareeb aakar kaha, “Tumhe pata hai, Rohan, kabhi kabhi mujhe lagta hai ki raat mein kuch jaadu hota hai. Lagta hai, jaise duniya saans rok rahi hai.”
+
+Usne sir hilaaya, uska dil tez dhadak raha tha. “Mujhe bhi aisa lagta hai. Jaise kuch bhi ho sakta hai.”
+
+Unki aankhein mil gayi, aur us pal sab kuch badal gaya. Rohan ko mehsoos hua ki wo usse ek aise tareeke se kheecha ja raha hai jise usne kabhi nahi mehsoos kiya. Usne dheere se uska haath pakda, unki ungliyan ek saath ho gayi. Meera ki saans thodi thi, aur usne bhago nahi kiya. Usne muskurahat di, uski aankhein shararat aur khwahish se chamakti thi.
+
+“Tumhe kuch dikhana hai?” usne pucha, uski awaaz mazak bhari. Bina jawab ka intezaar kiye, usne Rohan ko balcony ke kinare le gaya jahan unhe raat ke aasmaan ka saaf nazara dikh raha tha. Tare heere ki tarah chamak rahe the, aur chand ka chandi jaisa roshni har jagah chha raha tha.
+
+“Yeh mera pasandida jagah hai,” Meera ne kaha, uski nazar aasmaan par tik gayi. “Yahan aakar main sochti hoon aur sapne dekhti hoon.”
+
+Rohan uske kareeb khada tha, unke kandhe ek dusre se takra rahe the. Uska kareeb hona uske andar ek aag jagata tha, aur wo apne man mein uski meethi phoolon ki khushboo ko mehsoos nahi kar sakta tha. Meera ne dheere se apna sir thoda modha, unke chehre kuch hi inch door the.
+
+“Rohan,” usne fursat se kaha, “kabhi kabhi mujhe lagta hai ki kya hum sirf dosti se kuch zyada ke liye bane hain.”
+
+Uski baaton par Rohan ka dil dhadak utha. “Mujhe bhi yeh mehsoos hota hai, Meera. Tum mein aisi baat hai jise main ignore nahi kar sakta.”
+
+Us pal, Rohan ne apna chehra thoda aage kiya, aur unke honthon ne pehli baar milte hue ek naram, sambhal se bhara pyaar ka jashn mana. Yeh pyaar pehle dheere tha, bhavnaon ki mithas se bhara. Lekin jaise hi pyaar gehra hota gaya, wo aur bhi jor se, bechaini ke saath jodne lage, jaise unhone apne dil ki har khushi ek dusre ko samjhaane ki koshish ki.
+
+Unhone ek dusre se hatkar, saans chhodte hue dekha, Rohan uski aankhon mein koi bhi regret nahi dekh raha tha. Bas wo khwahish thi jo uske aankhon mein chamak rahi thi.
+
+“Chalo, isko jaldi mat karte,” Meera ne halka se kaha, uske haath se uska chehra chhute hue. “Chalo, har lamha ka anand lete hain.”
+
+Rohan ne sir hilaaya, uske dil mein ek rahat ka ehsaas mehsoos hua. Unhone agle kuch raaton mein apne naye rishte ki khoj ki, chaand ke neeche aur zyada pyaar bhare kiss kiye, har kiss mein ek naya josh tha.
+
+Tab wo bhavishya ka raat aaya—ek garam hawa ne sheher mein jaadu bhara. Rohan aur Meera apne balcony par the, unki hasi raat ke andhere mein gunj rahi thi. Unke beech ka chemistry bepanah tha, aur dono ko mehsoos hota tha ki kuch gehra hai.
+
+“Tumhe kabhi aisa lagta hai ki raat zinda hai?” Rohan ne poocha, uska dil dhadak raha tha.
+
+Meera ne kareeb aakar, uski saans garam thi. “Haan, lagta hai ismein sambhavnayein bhari hain.”
+
+Us shabd se prerit hoke, Rohan ne uska chehra apne haathon mein liya, aur unke honthon ne phir se milte hue ek behad tezi se bhara pyaar ka jashn mana. Unka pyaar unke beech mein ek aag bana raha tha, ek aisi bhavna jo unhone pehle kabhi nahi mehsoos ki.
+
+Jab wo kiss kar rahe the, duniya unke aas-paas se gayab ho gayi. Raat ki aawazein—chirp karte crickets, patton ki khudki—unke dil ki dhadkanon mein kho gayi. Unhone aur kareeb aakar ek dusre ki khushboo ko mehsoos kiya.
+
+Rohan ek pal ke liye ruk gaya, Meera ki aankhon mein dekhte hue. “Kya tum ismein sure ho?” usne fursat se poocha.
+
+Meera ne sir hilaaya, uska chehra nishchit lekin naram tha. “Main yeh chahati hoon, Rohan. Main tumhe chahati hoon.”
+
+Us praman ke saath, dono ek jazbaat ke jahan mein kho gaye. Rohan ne Meera ko balcony ke kinare tak le gaya, jahan chand ki roshni unhe chandi ke chamak mein dikhati thi. Unke kiss aur bhi bhari ho gaye, ek milan jo pyaar aur mithas se bhara tha.
+
+Yeh pal ajaya tha jaise samay kabhi na rukta ho, jab unhone apne jazbaton ko kabool kar liya, balcony unka gupt aashiyan ban gayi. Unhone ek dusre mein kho jaana shuru kar diya, duniya ke baahar chhodkar.
+
+Jaise hi unhone ek dusre se alag hue, dono saans lete hue, Rohan ne kaha, “Maine kabhi nahi socha tha ki ek aise pal ka bhi hone ka ehsaas ho sakta hai.”
+
+Meera ne muskurahat di, uski aankhon mein chamak thi. “Lekin kabhi kabhi, kuch bhi ho sakta hai.”
+
+Us raat ka chand unhe dekh raha tha, ek pyaara sa aashiq aur aashiqo ki kahani likhta hua, jo kabhi khatam nahi hoti.
+
+`; // Add the full Hindi story text here
+                document.title = "Story - Hindi"; // Update title
+            }
+        }
+    </script>
+</body>
+</html>

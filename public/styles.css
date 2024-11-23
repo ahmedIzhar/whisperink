@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Background color */
+    color: white; /* Default text color */
+    font-family: Arial, sans-serif; /* Set font family */
+}
+
+nav {
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+/* Logo container styling */
+.logo-container img {
+    max-width: 650px;
+    height: auto;
+}
+
+.genre-navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+}
+
+.genre-navbar .genre-logo {
+    margin-right: 15px; /* Space between the logo and the menu */
+    width: 40px; /* Adjust as needed */
+    height: auto;
+}
+
+.genre-navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.genre-navbar ul li {
+    margin-right: 35px; /* Space between items */
+}
+
+.genre-navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+.genre-navbar ul li a:hover {
+    color: lightskyblue;
+}
+
+.story-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default for larger screens */
+    gap: 10px;
+    padding-top: 50px; /* Adjust this to account for the navbar height */
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Story item styling */
+.story-item {
+    text-align: center; /* Center align the text and images */
+}
+
+/* Story image styling */
+.story-image {
+    width: 80%; /* Decrease size of images to 80% of their container */
+    height: auto;
+    border-radius: 8px; /* Optional: adds rounded corners */
+    border: 2px solid rgba(255, 217, 0, 0.859); /* Adds a golden border */
+    transition: transform 0.2s; /* Optional: adds a hover effect */
+    margin: auto; /* Centers the image in its grid cell */
+}
+
+/* Hover effect for images */
+.story-image:hover {
+    transform: scale(1.05); /* Optional: slightly enlarges image on hover */
+    cursor: pointer;
+}
+
+/* Story name styling */
+.story-name {
+    color: white; /* White color for the text */
+    margin-top: 5px; /* Space between image and text */
+}
+
+/* Remove underline from links */
+.story-container a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #000;
+    color: #ccc;
+    padding: 20px;
+    border-top: 1px solid #555;
+    margin-top: 50px;
+   
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+/* Responsive Design */
+@media (max-width: 1270px) {
+    .story-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+        padding-left: 15px; /* Adjust padding for mobile */
+        padding-right: 15px; /* Adjust padding for mobile */
+    }
+    .story-image{
+        border: 1px solid rgba(255, 217, 0, 0.859);
+    }
+
+
+    h1 {
+        font-size: 18px; /* Smaller text size on mobile */
+        text-align: center; /* Center the heading */
+        margin-top: 20px; /* Add some margin on top */
+    }
+
+    footer {
+        padding: 10px; /* Reduced footer padding on mobile */
+    }
+
+    footer p {
+        font-size: 12px; /* Smaller footer text on mobile */
+    }
+
+    footer ul li a {
+        font-size: 12px; /* Smaller footer link size on mobile */
+    }
+}
