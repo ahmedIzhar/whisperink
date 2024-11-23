@@ -6,17 +6,13 @@ const path = require('path');
 const app = express();
 app.use(express.json());
 
-// Configure CORS
-const corsOptions = {
-    origin: 'https://whisperink.vercel.app/', // Replace with your domain
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type']
-};
-app.use(cors(corsOptions));
+// CORS Setup
+app.use(cors({ origin: '*' }));
 
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Razorpay instance
 const razorpay = new Razorpay({
     key_id: 'rzp_live_i3ZxPZvkJubDIv', // Replace with your actual Razorpay Key ID
     key_secret: 'FdIGZa91GzX7tLDEuwocFYeX' // Replace with your actual Razorpay Key Secret
@@ -30,7 +26,6 @@ app.post('/api/create-order', async (req, res) => {
         }
 
         const amountInPaise = req.body.amount;
-
         const options = {
             amount: amountInPaise, // Amount in paise
             currency: 'INR',
@@ -50,9 +45,14 @@ app.get('/health', (req, res) => {
     res.send('Server is up and running!');
 });
 
-// Fallback route for SPA
+// Serve the index.html file at the root
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// Fallback route for any other paths (SPA routes)
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Start the server
