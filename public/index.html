@@ -91,105 +91,142 @@
     </footer>
 
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-<script>
-    async function checkAndInitiatePayment(story) {
-        let purchasedStories = JSON.parse(localStorage.getItem('purchasedStories')) || [];
-        let userPhone = localStorage.getItem('userPhone');
-
-        if (purchasedStories.includes(story)) {
-            window.location.href = story + '.html';
-            return;
-        }
-
-        if (!userPhone) {
-            userPhone = prompt("Please enter your phone number (10 digits):");
-            if (!/^\d{10}$/.test(userPhone)) {
-                alert("Please enter a valid 10-digit phone number.");
+    <script>
+        async function checkAndInitiatePayment(story) {
+            let purchasedStories = JSON.parse(localStorage.getItem('purchasedStories')) || [];
+            let userPhone = localStorage.getItem('userPhone');
+    
+            if (purchasedStories.includes(story)) {
+                window.location.href = story + '.html';
                 return;
             }
-            localStorage.setItem('userPhone', userPhone);
-        }
-
-        try {
-            console.log("Creating order...");
-            const response = await fetch('/api/create-order', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ amount: 800 })
-            });
-
-            const { orderId } = await response.json();
-            console.log("Order ID received:", orderId);
-            if (orderId) {
-                initiatePayment(story, userPhone, orderId);
-            } else {
-                alert("Failed to create an order. Please try again.");
+    
+            if (!userPhone) {
+                displayPhoneInput(story);
+                return;
             }
-        } catch (error) {
-            console.error("Error creating order:", error);
-            alert("There was an error creating your order. Please try again.");
+    
+            await createOrder(story, userPhone);
         }
-    }
-
-    function initiatePayment(story, userPhone, orderId) {
-    localStorage.setItem('selectedStory', story);
-
-    const options = {
-        "key": "rzp_live_i3ZxPZvkJubDIv",  // Your Razorpay API Key
-        "amount": 800,  // Amount in paise (₹8 = 800 paise)
-        "currency": "INR",  // Currency
-        "name": "WhisperInk",  // Your company name
-        "description": "Payment for Story Access",
-        "image": "logo.png",  // Logo image
-        "order_id": orderId,
-        "handler": async function (response) {
-            alert("Payment Successful. Payment ID: " + response.razorpay_payment_id);
-
-            let purchasedStories = JSON.parse(localStorage.getItem('purchasedStories')) || [];
-            purchasedStories.push(story);
-            localStorage.setItem('purchasedStories', JSON.stringify(purchasedStories));
-
-            await fetch('/api/orders', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    paymentId: response.razorpay_payment_id,
-                    orderId: orderId,
-                    story: story,
-                    userId: userPhone
-                })
-            });
-
-            window.location.href = story + '.html';
-        },
-        "prefill": {
-            "contact": userPhone
-        },
-        "modal": {
-            "ondismiss": function () {
-                if (confirm("Are you sure you want to close the payment form?")) {
-                    console.log("Payment form closed by the user.");
+    
+        function displayPhoneInput(story) {
+            // Create the container
+            const container = document.createElement('div');
+            container.id = 'phone-input-container';
+            container.style.position = 'fixed';
+            container.style.top = '50%';
+            container.style.left = '50%';
+            container.style.transform = 'translate(-50%, -50%)';
+            container.style.padding = '20px';
+            container.style.background = '#fff';
+            container.style.border = '1px solid #ccc';
+            container.style.borderRadius = '8px';
+            container.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
+            container.style.zIndex = '1000';
+    
+            // Add the form content
+            container.innerHTML = `
+                <h3 style="margin: 0 0 10px;">Enter Your Phone Number</h3>
+                <input
+                    id="phone-input"
+                    type="text"
+                    placeholder="Enter 10-digit phone number"
+                    style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;"
+                />
+                <button
+                    id="phone-submit-button"
+                    style="width: 100%; padding: 10px; background: #007bff; color: #fff; border: none; border-radius: 4px; cursor: pointer;"
+                >
+                    Submit
+                </button>
+            `;
+    
+            document.body.appendChild(container);
+    
+            // Handle submission
+            document.getElementById('phone-submit-button').addEventListener('click', () => {
+                const phoneInput = document.getElementById('phone-input').value.trim();
+                if (/^\\d{10}$/.test(phoneInput)) {
+                    localStorage.setItem('userPhone', phoneInput);
+                    document.body.removeChild(container); // Remove the container
+                    createOrder(story, phoneInput); // Proceed to create an order
                 } else {
-                    console.log("User chose to continue with payment.");
+                    alert("Please enter a valid 10-digit phone number.");
                 }
-            }
-        },
-        // Explicitly allow UPI payments and use UPI ID
-        "payment_capture": 1,  // Auto-capture payment after successful payment
-        "method": {
-            "upi": true,  // Enable UPI payment
-            "card": true,  // Enable card payments
-            "netbanking": true,  // Enable net banking (if required)
-            "wallet": true  // Enable wallets (e.g., Paytm, PhonePe, etc.)
+            });
         }
-    };
-
-    console.log("Opening Razorpay payment form...");
-    var rzp = new Razorpay(options);
-    rzp.open();
-}
-
-
-</script>
-</body>
+    
+        async function createOrder(story, userPhone) {
+            try {
+                console.log("Creating order...");
+                const response = await fetch('/api/create-order', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ amount: 800 })
+                });
+    
+                const { orderId } = await response.json();
+                console.log("Order ID received:", orderId);
+                if (orderId) {
+                    initiatePayment(story, userPhone, orderId);
+                } else {
+                    alert("Failed to create an order. Please try again.");
+                }
+            } catch (error) {
+                console.error("Error creating order:", error);
+                alert("There was an error creating your order. Please try again.");
+            }
+        }
+    
+        function initiatePayment(story, userPhone, orderId) {
+            localStorage.setItem('selectedStory', story);
+    
+            const options = {
+                key: "rzp_live_i3ZxPZvkJubDIv",
+                amount: 800,
+                currency: "INR",
+                name: "WhisperInk",
+                description: "Payment for Story Access",
+                image: "logo.png",
+                order_id: orderId,
+                handler: async function (response) {
+                    alert("Payment Successful. Payment ID: " + response.razorpay_payment_id);
+    
+                    let purchasedStories = JSON.parse(localStorage.getItem('purchasedStories')) || [];
+                    purchasedStories.push(story);
+                    localStorage.setItem('purchasedStories', JSON.stringify(purchasedStories));
+    
+                    await fetch('/api/orders', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            paymentId: response.razorpay_payment_id,
+                            orderId: orderId,
+                            story: story,
+                            userId: userPhone
+                        })
+                    });
+    
+                    window.location.href = story + '.html';
+                },
+                prefill: { contact: userPhone },
+                modal: {
+                    ondismiss: function () {
+                        if (confirm("Are you sure you want to close the payment form?")) {
+                            console.log("Payment form closed by the user.");
+                        } else {
+                            console.log("User chose to continue with payment.");
+                        }
+                    }
+                },
+                payment_capture: 1,
+                method: { upi: true, card: true, netbanking: true, wallet: true }
+            };
+    
+            console.log("Opening Razorpay payment form...");
+            var rzp = new Razorpay(options);
+            rzp.open();
+        }
+    </script>
+    </body>
 </html>
