@@ -1,14 +1,16 @@
 const express = require('express');
 const Razorpay = require('razorpay');
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
 // Serve static files from the 'public' directory
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
+// Razorpay instance
 const razorpay = new Razorpay({
     key_id: 'rzp_live_i3ZxPZvkJubDIv', // Replace with your actual Razorpay Key ID
     key_secret: 'FdIGZa91GzX7tLDEuwocFYeX' // Replace with your actual Razorpay Key Secret
@@ -17,18 +19,15 @@ const razorpay = new Razorpay({
 // Endpoint to create an order
 app.post('/api/create-order', async (req, res) => {
     try {
-        // Validate amount
         if (!req.body.amount || isNaN(req.body.amount)) {
             return res.status(400).json({ message: 'Invalid amount provided.' });
         }
 
-        // Ensure the amount is in paise (1 INR = 100 paise)
         const amountInPaise = req.body.amount;
-
         const options = {
             amount: amountInPaise, // Amount in paise
             currency: 'INR',
-            receipt: 'receipt#1' // Optional: Add a receipt number
+            receipt: 'receipt#1'
         };
 
         const order = await razorpay.orders.create(options);
@@ -39,11 +38,16 @@ app.post('/api/create-order', async (req, res) => {
     }
 });
 
-// Health check route
-app.get('/public', (req, res) => {
-    res.send('Server is up and running!');
+// Route to serve index.html
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// Fallback for SPA routing (optional)
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Start the server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log('Server running on port ${PORT}'));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
