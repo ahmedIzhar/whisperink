@@ -110,7 +110,9 @@
         }
     
         function displayPhoneInput(story) {
-            // Create the container
+            // Create a container if it doesn't already exist
+            if (document.getElementById('phone-input-container')) return;
+    
             const container = document.createElement('div');
             container.id = 'phone-input-container';
             container.style.position = 'fixed';
@@ -124,9 +126,8 @@
             container.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
             container.style.zIndex = '1000';
     
-            // Add the form content
             container.innerHTML = `
-                <h3 style="margin: 0 0 10px;">Enter Your Phone Number</h3>
+                <h3 style="margin: 0 0 10px; text-align: center;">Enter Your Phone Number</h3>
                 <input
                     id="phone-input"
                     type="text"
@@ -143,10 +144,10 @@
     
             document.body.appendChild(container);
     
-            // Handle submission
             document.getElementById('phone-submit-button').addEventListener('click', () => {
                 const phoneInput = document.getElementById('phone-input').value.trim();
-                if (/^\\d{10}$/.test(phoneInput)) {
+    
+                if (/^\d{10}$/.test(phoneInput)) {
                     localStorage.setItem('userPhone', phoneInput);
                     document.body.removeChild(container); // Remove the container
                     createOrder(story, phoneInput); // Proceed to create an order
@@ -167,6 +168,7 @@
     
                 const { orderId } = await response.json();
                 console.log("Order ID received:", orderId);
+    
                 if (orderId) {
                     initiatePayment(story, userPhone, orderId);
                 } else {
@@ -228,5 +230,6 @@
             rzp.open();
         }
     </script>
+    
     </body>
 </html>
